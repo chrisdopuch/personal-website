@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import me from './me.jpg';
 import './App.css';
 
 class App extends Component {
@@ -7,9 +7,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={me} className="App-face" alt="my-face"/>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            I wrote enough React to make my head spin!
+          <br/>
+            More content to come soon...
           </p>
           <a
             className="App-link"
