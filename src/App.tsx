@@ -1,4 +1,5 @@
 import AppBar from '@material-ui/core/AppBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import IconButton from '@material-ui/core/IconButton';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -39,31 +40,37 @@ class App extends React.Component<IAppProps> {
   public render() {
     const { classes, title } = this.props;
     return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar variant="dense">
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" color="inherit">
-              {title}
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <img src={me} className={classes.face} alt="my-face"/>
-          <p>
+      <React.Fragment>
+        <CssBaseline />
+        <div className={classes.root}>
+          <AppBar position="static">
+            <Toolbar variant="dense">
+              <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6" color="inherit">
+                {title}
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <img src={me} className={classes.face} alt="my-face"/>
+          <Typography variant="body1">
             I wrote enough React to make my head spin!
-          <br/>
+          </Typography>
+          <Typography variant="body1">
             More content to come soon...
-          </p>
-          <a
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-          </a>
-      </div>
+          </Typography>
+          <Typography variant="body1">
+            <a
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              Learn React
+            </a>
+          </Typography>
+        </div>
+      </React.Fragment>
     );
   }
 }
