@@ -1,22 +1,30 @@
-// import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from "@material-ui/core/CssBaseline";
-// import IconButton from '@material-ui/core/IconButton';
-import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
-// import MenuIcon from '@material-ui/icons/Menu';
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import ResponsiveDrawer from "./components/ResponsiveDrawer";
-// import me from './images/me.jpg';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import {
+  createMuiTheme,
+  createStyles,
+  MuiThemeProvider,
+  Theme,
+  withStyles,
+  WithStyles,
+} from '@material-ui/core/styles';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ResponsiveDrawer from './components/ResponsiveDrawer';
 
-const stylesDeclarations = (theme: Theme) =>
-  createStyles({
+const stylesDeclarations = (_theme: Theme) => {
+  return createStyles({
     root: {
       flexGrow: 1,
-      textAlign: "center",
+      textAlign: 'center',
     },
   });
+};
+
+const appTheme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+});
 
 interface IAppProps extends WithStyles<typeof stylesDeclarations> {
   title: string;
@@ -24,16 +32,22 @@ interface IAppProps extends WithStyles<typeof stylesDeclarations> {
 }
 
 class App extends React.Component<IAppProps> {
+  public static defaultProps = {
+    theme: appTheme,
+  };
+
   public render() {
-    const { classes, title } = this.props;
+    const { classes, title, theme } = this.props;
     return (
       <React.Fragment>
         <CssBaseline />
-        <Router>
-          <div className={classes.root}>
-            <ResponsiveDrawer title={title} />
-          </div>
-        </Router>
+        <MuiThemeProvider theme={theme}>
+          <Router>
+            <div className={classes.root}>
+              <ResponsiveDrawer title={title} />
+            </div>
+          </Router>
+        </MuiThemeProvider>
       </React.Fragment>
     );
   }

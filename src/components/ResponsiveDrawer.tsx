@@ -1,21 +1,23 @@
-import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Divider from "@material-ui/core/Divider";
-import Drawer from "@material-ui/core/Drawer";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import { createStyles, Theme, withStyles, WithStyles } from "@material-ui/core/styles";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import MailIcon from "@material-ui/icons/Mail";
-import MenuIcon from "@material-ui/icons/Menu";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import React from "react";
-import { Link, Route } from "react-router-dom";
+import AppBar from '@material-ui/core/AppBar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Divider from '@material-ui/core/Divider';
+import Drawer from '@material-ui/core/Drawer';
+import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
+import { SvgIconProps } from '@material-ui/core/SvgIcon';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import CameraIcon from '@material-ui/icons/Camera';
+import HelpIcon from '@material-ui/icons/Help';
+import HomeIcon from '@material-ui/icons/Home';
+import MenuIcon from '@material-ui/icons/Menu';
+import React, { ComponentType } from 'react';
+import { Link, Route } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -23,7 +25,7 @@ const stylesDeclarations = (theme: Theme) =>
   createStyles({
     appBar: {
       marginLeft: drawerWidth,
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up('sm')]: {
         width: `calc(100% - ${drawerWidth}px)`,
       },
     },
@@ -32,7 +34,7 @@ const stylesDeclarations = (theme: Theme) =>
       padding: theme.spacing.unit * 3,
     },
     drawer: {
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up('sm')]: {
         flexShrink: 0,
         width: drawerWidth,
       },
@@ -42,12 +44,12 @@ const stylesDeclarations = (theme: Theme) =>
     },
     menuButton: {
       marginRight: 20,
-      [theme.breakpoints.up("sm")]: {
-        display: "none",
+      [theme.breakpoints.up('sm')]: {
+        display: 'none',
       },
     },
     root: {
-      display: "flex",
+      display: 'flex',
     },
     toolbar: theme.mixins.toolbar,
   });
@@ -60,6 +62,30 @@ interface IResponsiveDrawerProps extends WithStyles<typeof stylesDeclarations> {
   title: string;
   theme: Theme;
 }
+
+interface IRoute {
+  to: string;
+  label: string;
+  Icon: ComponentType<SvgIconProps>;
+}
+
+const routes: IRoute[] = [
+  { to: '/', label: 'Home', Icon: HomeIcon },
+  { to: '/about', label: 'About', Icon: HelpIcon },
+  { to: '/gallery', label: 'Gallery', Icon: CameraIcon },
+];
+
+const Index = () => {
+  return <Typography variant="h5">Home</Typography>;
+};
+
+const About = () => {
+  return <Typography variant="h5">About</Typography>;
+};
+
+const Gallery = () => {
+  return <Typography variant="h5">Gallery</Typography>;
+};
 
 class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsiveDrawerState> {
   public constructor(props: IResponsiveDrawerProps) {
@@ -81,21 +107,17 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button={true} key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button={true} key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
+          {routes.map(({ label, to, Icon }) => {
+            const linkProps = { to } as any;
+            return (
+              <ListItem button={true} key={label} component={Link} {...linkProps}>
+                <ListItemIcon>
+                  <Icon />
+                </ListItemIcon>
+                <ListItemText primary={label} />
+              </ListItem>
+            );
+          })}
         </List>
       </div>
     );
@@ -103,7 +125,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <AppBar position="fixed" className={classes.appBar} title={title}>
+        <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -114,7 +136,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit" noWrap={true}>
-              Responsive drawer
+              {title}
             </Typography>
           </Toolbar>
         </AppBar>
@@ -123,7 +145,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
           <Hidden smUp={true} implementation="css">
             <Drawer
               variant="temporary"
-              anchor={theme.direction === "rtl" ? "right" : "left"}
+              anchor={theme.direction === 'rtl' ? 'right' : 'left'}
               open={this.state.mobileOpen}
               onClose={this.handleDrawerToggle}
               classes={{
@@ -152,7 +174,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
           <div className={classes.toolbar} />
           <Route path="/" exact={true} component={Index} />
           <Route path="/about/" component={About} />
-          <Route path="/users/" component={Users} />
+          <Route path="/gallery/" component={Gallery} />
         </main>
       </div>
     );
