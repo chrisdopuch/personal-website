@@ -107,7 +107,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
           {routes.map(({ label, to, Icon }) => {
             const linkProps = { to } as any;
             return (
-              <ListItem button={true} key={label} component={Link} {...linkProps}>
+              <ListItem onClick={this.handleLinkClick} button={true} key={label} component={Link} {...linkProps}>
                 <ListItemIcon>
                   <Icon />
                 </ListItemIcon>
@@ -176,6 +176,12 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
       </div>
     );
   }
+
+  private handleLinkClick = () => {
+    this.setState({
+      mobileOpen: false,
+    });
+  };
 }
 
 export default withStyles(stylesDeclarations, { withTheme: true })(ResponsiveDrawer);
