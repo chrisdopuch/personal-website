@@ -18,6 +18,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { ComponentType } from 'react';
 import { Link, Route } from 'react-router-dom';
+import Home from './Home';
 
 const drawerWidth = 240;
 
@@ -74,10 +75,6 @@ const routes: IRoute[] = [
   { to: '/about', label: 'About', Icon: HelpIcon },
   { to: '/gallery', label: 'Gallery', Icon: CameraIcon },
 ];
-
-const Index = () => {
-  return <Typography variant="h5">Home</Typography>;
-};
 
 const About = () => {
   return <Typography variant="h5">About</Typography>;
@@ -172,7 +169,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
         </nav>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Route path="/" exact={true} component={Index} />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/about/" component={About} />
           <Route path="/gallery/" component={Gallery} />
         </main>

@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core/styles';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import ResponsiveDrawer from './components/ResponsiveDrawer';
+import ResponsiveDrawer from './ResponsiveDrawer';
 
 const stylesDeclarations = (_theme: Theme) => {
   return createStyles({
