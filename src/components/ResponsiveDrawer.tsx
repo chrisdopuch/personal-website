@@ -1,5 +1,4 @@
 import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
@@ -25,10 +24,7 @@ const drawerWidth = 240;
 const stylesDeclarations = (theme: Theme) =>
   createStyles({
     appBar: {
-      marginLeft: drawerWidth,
-      [theme.breakpoints.up('sm')]: {
-        width: `calc(100% - ${drawerWidth}px)`,
-      },
+      zIndex: theme.zIndex.drawer + 1,
     },
     content: {
       flexGrow: 1,
@@ -121,7 +117,6 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
 
     return (
       <div className={classes.root}>
-        <CssBaseline />
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <IconButton
