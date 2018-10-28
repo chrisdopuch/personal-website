@@ -70,7 +70,7 @@ interface IRoute {
 
 const routes: IRoute[] = [
   { to: '/', label: 'Home', Icon: HomeIcon },
-  { to: '/about', label: 'About', Icon: HelpIcon },
+  { to: '/about', label: 'About me', Icon: HelpIcon },
   { to: '/gallery', label: 'Gallery', Icon: CameraIcon },
   { to: '/projects', label: 'Projects', Icon: CodeIcon },
 ];

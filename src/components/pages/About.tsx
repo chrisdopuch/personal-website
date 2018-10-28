@@ -52,7 +52,7 @@ interface IQuickFact {
   componentProps?: object;
 }
 
-const quickFacts: IQuickFact[] = [
+export const quickFacts: IQuickFact[] = [
   {
     Icon: HomeIcon,
     primary: 'Location',
@@ -84,7 +84,7 @@ const quickFacts: IQuickFact[] = [
   },
 ];
 
-function getQuickFactsItems(facts: IQuickFact[]) {
+export function getQuickFactsItems(facts: IQuickFact[]) {
   return facts.map(({ primary, secondary, tertiary, Icon, component, componentProps }) => {
     return (
       <React.Fragment key={primary}>
@@ -108,7 +108,7 @@ function getQuickFactsItems(facts: IQuickFact[]) {
 
 interface IAboutProps extends WithStyles<typeof stylesDeclarations> {}
 
-class About extends Component<IAboutProps> {
+export class About extends Component<IAboutProps> {
   public render() {
     const { classes } = this.props;
 

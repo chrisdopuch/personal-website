@@ -28,7 +28,7 @@ const stylesDeclarations = (theme: Theme) =>
 
 interface IHomeProps extends WithStyles<typeof stylesDeclarations> {}
 
-class Home extends React.Component<IHomeProps> {
+export class Home extends React.Component<IHomeProps> {
   public render() {
     const { classes } = this.props;
     return (

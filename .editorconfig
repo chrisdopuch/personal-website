@@ -3,6 +3,6 @@
 # top-most EditorConfig file
 root = true
 
-[*.{ts,js,jsx,json}]
+[*.{ts,js,jsx,tsx,json}]
 indent_style = space
 indent_size = 2
