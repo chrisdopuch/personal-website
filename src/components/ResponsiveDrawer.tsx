@@ -12,12 +12,14 @@ import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import CameraIcon from '@material-ui/icons/Camera';
+import CodeIcon from '@material-ui/icons/Code';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { ComponentType } from 'react';
 import { Link, Route } from 'react-router-dom';
-import Home from './Home';
+import About from './pages/About';
+import Home from './pages/Home';
 
 const drawerWidth = 240;
 
@@ -68,12 +70,13 @@ interface IRoute {
 
 const routes: IRoute[] = [
   { to: '/', label: 'Home', Icon: HomeIcon },
-  { to: '/about', label: 'About', Icon: HelpIcon },
+  { to: '/about', label: 'About me', Icon: HelpIcon },
   { to: '/gallery', label: 'Gallery', Icon: CameraIcon },
+  { to: '/projects', label: 'Projects', Icon: CodeIcon },
 ];
 
-const About = () => {
-  return <Typography variant="h5">About</Typography>;
+const Projects = () => {
+  return <Typography variant="h5">Projects</Typography>;
 };
 
 const Gallery = () => {
@@ -165,8 +168,9 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
         <main className={classes.content}>
           <div className={classes.toolbar} />
           <Route path="/" exact={true} component={Home} />
-          <Route path="/about/" component={About} />
-          <Route path="/gallery/" component={Gallery} />
+          <Route path="/about" component={About} />
+          <Route path="/gallery" component={Gallery} />
+          <Route path="/projects" component={Projects} />
         </main>
       </div>
     );
