@@ -15,7 +15,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import React, { Component, ComponentClass, ComponentType } from 'react';
-import meSinging from '../images/me-singing.jpg';
+import meSinging from '../../images/me-singing.jpg';
 
 const stylesDeclarations = (theme: Theme) => ({
   avatar: {

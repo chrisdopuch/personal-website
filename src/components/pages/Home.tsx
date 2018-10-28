@@ -2,7 +2,7 @@ import Paper from '@material-ui/core/Paper';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import me from '../images/me.jpg';
+import me from '../../images/me.jpg';
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({
@@ -41,7 +41,7 @@ class Home extends React.Component<IHomeProps> {
             Learn React
           </a>
         </Typography>
-      </Paper >
+      </Paper>
     );
   }
 }

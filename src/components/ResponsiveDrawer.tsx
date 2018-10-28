@@ -18,8 +18,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { ComponentType } from 'react';
 import { Link, Route } from 'react-router-dom';
-import About from './About';
-import Home from './Home';
+import About from './pages/About';
+import Home from './pages/Home';
 
 const drawerWidth = 240;
 
