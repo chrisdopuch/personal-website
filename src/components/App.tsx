@@ -31,7 +31,7 @@ interface IAppProps extends WithStyles<typeof stylesDeclarations> {
   theme: Theme;
 }
 
-class App extends React.Component<IAppProps> {
+export class App extends React.Component<IAppProps> {
   public static defaultProps = {
     theme: appTheme,
   };
