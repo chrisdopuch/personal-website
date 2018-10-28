@@ -1,3 +1,4 @@
+import Paper from '@material-ui/core/Paper';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
@@ -18,6 +19,11 @@ const stylesDeclarations = (theme: Theme) =>
       maxWidth: '300px',
       width: 'auto',
     },
+    root: {
+      paddingBottom: theme.spacing.unit * 2,
+      paddingTop: theme.spacing.unit * 2,
+      ...theme.mixins.gutters(),
+    },
   });
 
 interface IHomeProps extends WithStyles<typeof stylesDeclarations> {}
@@ -26,7 +32,7 @@ class Home extends React.Component<IHomeProps> {
   public render() {
     const { classes } = this.props;
     return (
-      <React.Fragment>
+      <Paper className={classes.root} elevation={1}>
         <img src={me} className={classes.face} alt="my-face" />
         <Typography variant="body1">I wrote enough React to make my head spin!</Typography>
         <Typography variant="body1">More content to come soon...</Typography>
@@ -35,9 +41,9 @@ class Home extends React.Component<IHomeProps> {
             Learn React
           </a>
         </Typography>
-      </React.Fragment>
+      </Paper >
     );
   }
 }
 
-export default withStyles(stylesDeclarations)(Home);
+export default withStyles(stylesDeclarations, { withTheme: true })(Home);

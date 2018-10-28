@@ -17,6 +17,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { ComponentType } from 'react';
 import { Link, Route } from 'react-router-dom';
+import About from './About';
 import Home from './Home';
 
 const drawerWidth = 240;
@@ -71,10 +72,6 @@ const routes: IRoute[] = [
   { to: '/about', label: 'About', Icon: HelpIcon },
   { to: '/gallery', label: 'Gallery', Icon: CameraIcon },
 ];
-
-const About = () => {
-  return <Typography variant="h5">About</Typography>;
-};
 
 const Gallery = () => {
   return <Typography variant="h5">Gallery</Typography>;
