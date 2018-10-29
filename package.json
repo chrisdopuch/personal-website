@@ -17,7 +17,8 @@
     "test": "jest",
     "eject": "react-scripts-ts eject",
     "lint": "tslint -p tsconfig.json",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix"
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
   },
   "devDependencies": {
     "@material-ui/icons": "^3.0.1",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^16.0.9",
     "@types/react-router-dom": "^4.3.1",
     "ajv": "^6.5.4",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
