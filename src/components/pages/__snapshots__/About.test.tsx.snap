@@ -1,101 +1,147 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
-Array [
-  <React.Fragment>
-    <WithStyles(ListItem)
-      divider={true}
-    >
-      <WithStyles(ListItemAvatar)>
-        <WithStyles(Avatar)>
-          <pure(HomeIcon) />
-        </WithStyles(Avatar)>
-      </WithStyles(ListItemAvatar)>
-      <WithStyles(ListItemText)
-        primary="Location"
-        secondary="Portland, Oregon"
-      />
-    </WithStyles(ListItem)>
-  </React.Fragment>,
-  <React.Fragment>
-    <WithStyles(ListItem)
-      divider={true}
-    >
-      <WithStyles(ListItemAvatar)>
-        <WithStyles(Avatar)>
-          <pure(WorkIcon) />
-        </WithStyles(Avatar)>
-      </WithStyles(ListItemAvatar)>
-      <WithStyles(ListItemText)
-        primary="Job Title"
-        secondary="Software Engineer at Moovel North America"
-      />
-    </WithStyles(ListItem)>
-  </React.Fragment>,
-  <React.Fragment>
-    <WithStyles(ListItem)
-      divider={false}
-    >
-      <WithStyles(ListItemAvatar)>
-        <WithStyles(Avatar)>
-          <pure(SchoolIcon) />
-        </WithStyles(Avatar)>
-      </WithStyles(ListItemAvatar)>
-      <WithStyles(ListItemText)
-        primary="Education"
-        secondary="BA in Computer Science, Univeristy of Missouri"
-      />
-    </WithStyles(ListItem)>
-    <WithStyles(ListItem)
-      divider={true}
-    >
-      <WithStyles(ListItemText)
-        inset={true}
-        secondary="BS in Information Technology, Univeristy of Missouri"
-      />
-    </WithStyles(ListItem)>
-  </React.Fragment>,
-  <React.Fragment>
-    <WithStyles(ListItem)
-      divider={false}
-    >
-      <WithStyles(ListItemAvatar)>
-        <WithStyles(Avatar)>
-          <pure(BuildIcon) />
-        </WithStyles(Avatar)>
-      </WithStyles(ListItemAvatar)>
-      <WithStyles(ListItemText)
-        primary="Technologies"
-        secondary="NodeJS, Typescript, React, Redux, Express, HapiJS"
-      />
-    </WithStyles(ListItem)>
-    <WithStyles(ListItem)
-      divider={true}
-    >
-      <WithStyles(ListItemText)
-        inset={true}
-        secondary="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
-      />
-    </WithStyles(ListItem)>
-  </React.Fragment>,
-  <React.Fragment>
-    <WithStyles(ListItem)
-      component="a"
-      divider={true}
-      href="http://github.com/chrisdopuch"
-    >
-      <WithStyles(ListItemAvatar)>
-        <WithStyles(Avatar)>
-          <pure(CodeIcon) />
-        </WithStyles(Avatar)>
-      </WithStyles(ListItemAvatar)>
-      <WithStyles(ListItemText)
-        primary="Github Profile"
-        secondary="http://github.com/chrisdopuch"
-      />
-    </WithStyles(ListItem)>
-  </React.Fragment>,
-]
+exports[`About #renderAvatar should render the avatar 1`] = `
+<div
+  className="centered"
+>
+  <WithStyles(Avatar)
+    alt="Chris Dopuch"
+    className="avatar"
+    src="test-file-stub"
+  />
+</div>
+`;
+
+exports[`About #renderHeader should render the header 1`] = `
+<React.Fragment>
+  <WithStyles(Typography)
+    component="h3"
+    variant="h2"
+  >
+    About me
+  </WithStyles(Typography)>
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <WithStyles(Typography)
+    component="p"
+  >
+    Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I am employed by Moovel North America where I work on web applications and services using technologies like NodeJS, Typescript, React, and Redux. Outside of work I enjoy tabletop and roleplay gaming, watching cult movies, going to heavy metal concerts, drawing, and painting. On this site you can find many examples of my work including my art gallery as well as many of my programming projects.
+  </WithStyles(Typography)>
+</React.Fragment>
+`;
+
+exports[`About #renderQuickFacts should render the quick facts list 1`] = `
+<React.Fragment>
+  <WithStyles(Typography)
+    component="h5"
+    variant="h5"
+  >
+    Quick Facts
+  </WithStyles(Typography)>
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <div
+    className="list"
+  >
+    <WithStyles(List)>
+      <React.Fragment>
+        <WithStyles(ListItem)
+          divider={true}
+        >
+          <WithStyles(ListItemAvatar)>
+            <WithStyles(Avatar)>
+              <pure(HomeIcon) />
+            </WithStyles(Avatar)>
+          </WithStyles(ListItemAvatar)>
+          <WithStyles(ListItemText)
+            primary="Location"
+            secondary="Portland, Oregon"
+          />
+        </WithStyles(ListItem)>
+      </React.Fragment>
+      <React.Fragment>
+        <WithStyles(ListItem)
+          divider={true}
+        >
+          <WithStyles(ListItemAvatar)>
+            <WithStyles(Avatar)>
+              <pure(WorkIcon) />
+            </WithStyles(Avatar)>
+          </WithStyles(ListItemAvatar)>
+          <WithStyles(ListItemText)
+            primary="Job Title"
+            secondary="Software Engineer at Moovel North America"
+          />
+        </WithStyles(ListItem)>
+      </React.Fragment>
+      <React.Fragment>
+        <WithStyles(ListItem)
+          divider={false}
+        >
+          <WithStyles(ListItemAvatar)>
+            <WithStyles(Avatar)>
+              <pure(SchoolIcon) />
+            </WithStyles(Avatar)>
+          </WithStyles(ListItemAvatar)>
+          <WithStyles(ListItemText)
+            primary="Education"
+            secondary="BA in Computer Science, Univeristy of Missouri"
+          />
+        </WithStyles(ListItem)>
+        <WithStyles(ListItem)
+          divider={true}
+        >
+          <WithStyles(ListItemText)
+            inset={true}
+            secondary="BS in Information Technology, Univeristy of Missouri"
+          />
+        </WithStyles(ListItem)>
+      </React.Fragment>
+      <React.Fragment>
+        <WithStyles(ListItem)
+          divider={false}
+        >
+          <WithStyles(ListItemAvatar)>
+            <WithStyles(Avatar)>
+              <pure(BuildIcon) />
+            </WithStyles(Avatar)>
+          </WithStyles(ListItemAvatar)>
+          <WithStyles(ListItemText)
+            primary="Technologies"
+            secondary="NodeJS, Typescript, React, Redux, Express, HapiJS"
+          />
+        </WithStyles(ListItem)>
+        <WithStyles(ListItem)
+          divider={true}
+        >
+          <WithStyles(ListItemText)
+            inset={true}
+            secondary="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+          />
+        </WithStyles(ListItem)>
+      </React.Fragment>
+      <React.Fragment>
+        <WithStyles(ListItem)
+          component="a"
+          divider={true}
+          href="http://github.com/chrisdopuch"
+        >
+          <WithStyles(ListItemAvatar)>
+            <WithStyles(Avatar)>
+              <pure(CodeIcon) />
+            </WithStyles(Avatar)>
+          </WithStyles(ListItemAvatar)>
+          <WithStyles(ListItemText)
+            primary="Github Profile"
+            secondary="http://github.com/chrisdopuch"
+          />
+        </WithStyles(ListItem)>
+      </React.Fragment>
+    </WithStyles(List)>
+  </div>
+</React.Fragment>
 `;
 
 exports[`About Component should render with default props 1`] = `
@@ -118,132 +164,278 @@ exports[`About Component should render with default props 1`] = `
     >
       Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I am employed by Moovel North America where I work on web applications and services using technologies like NodeJS, Typescript, React, and Redux. Outside of work I enjoy tabletop and roleplay gaming, watching cult movies, going to heavy metal concerts, drawing, and painting. On this site you can find many examples of my work including my art gallery as well as many of my programming projects.
     </WithStyles(Typography)>
-    <WithStyles(Grid)
-      className="gridContainer"
-      container={true}
-      spacing={24}
+    <Hidden
+      implementation="css"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
     >
       <WithStyles(Grid)
-        item={true}
-        xs={6}
+        className="gridContainer"
+        container={true}
+        spacing={24}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={6}
+        >
+          <div
+            className="centered"
+          >
+            <WithStyles(Avatar)
+              alt="Chris Dopuch"
+              className="avatar"
+              src="test-file-stub"
+            />
+          </div>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={6}
+        >
+          <WithStyles(Typography)
+            component="h5"
+            variant="h5"
+          >
+            Quick Facts
+          </WithStyles(Typography)>
+          <WithStyles(Divider)
+            className="divider"
+          />
+          <div
+            className="list"
+          >
+            <WithStyles(List)>
+              <WithStyles(ListItem)
+                divider={true}
+                key="Location"
+              >
+                <WithStyles(ListItemAvatar)>
+                  <WithStyles(Avatar)>
+                    <pure(HomeIcon) />
+                  </WithStyles(Avatar)>
+                </WithStyles(ListItemAvatar)>
+                <WithStyles(ListItemText)
+                  primary="Location"
+                  secondary="Portland, Oregon"
+                />
+              </WithStyles(ListItem)>
+              <WithStyles(ListItem)
+                divider={true}
+                key="Job Title"
+              >
+                <WithStyles(ListItemAvatar)>
+                  <WithStyles(Avatar)>
+                    <pure(WorkIcon) />
+                  </WithStyles(Avatar)>
+                </WithStyles(ListItemAvatar)>
+                <WithStyles(ListItemText)
+                  primary="Job Title"
+                  secondary="Software Engineer at Moovel North America"
+                />
+              </WithStyles(ListItem)>
+              <WithStyles(ListItem)
+                divider={false}
+                key="Education"
+              >
+                <WithStyles(ListItemAvatar)>
+                  <WithStyles(Avatar)>
+                    <pure(SchoolIcon) />
+                  </WithStyles(Avatar)>
+                </WithStyles(ListItemAvatar)>
+                <WithStyles(ListItemText)
+                  primary="Education"
+                  secondary="BA in Computer Science, Univeristy of Missouri"
+                />
+              </WithStyles(ListItem)>
+              <WithStyles(ListItem)
+                divider={true}
+                key="BS in Information Technology, Univeristy of Missouri"
+              >
+                <WithStyles(ListItemText)
+                  inset={true}
+                  secondary="BS in Information Technology, Univeristy of Missouri"
+                />
+              </WithStyles(ListItem)>
+              <WithStyles(ListItem)
+                divider={false}
+                key="Technologies"
+              >
+                <WithStyles(ListItemAvatar)>
+                  <WithStyles(Avatar)>
+                    <pure(BuildIcon) />
+                  </WithStyles(Avatar)>
+                </WithStyles(ListItemAvatar)>
+                <WithStyles(ListItemText)
+                  primary="Technologies"
+                  secondary="NodeJS, Typescript, React, Redux, Express, HapiJS"
+                />
+              </WithStyles(ListItem)>
+              <WithStyles(ListItem)
+                divider={true}
+                key="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+              >
+                <WithStyles(ListItemText)
+                  inset={true}
+                  secondary="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+                />
+              </WithStyles(ListItem)>
+              <WithStyles(ListItem)
+                component="a"
+                divider={true}
+                href="http://github.com/chrisdopuch"
+                key="Github Profile"
+              >
+                <WithStyles(ListItemAvatar)>
+                  <WithStyles(Avatar)>
+                    <pure(CodeIcon) />
+                  </WithStyles(Avatar)>
+                </WithStyles(ListItemAvatar)>
+                <WithStyles(ListItemText)
+                  primary="Github Profile"
+                  secondary="http://github.com/chrisdopuch"
+                />
+              </WithStyles(ListItem)>
+            </WithStyles(List)>
+          </div>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="css"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={true}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <div
+        className="centered"
       >
         <WithStyles(Avatar)
           alt="Chris Dopuch"
           className="avatar"
           src="test-file-stub"
         />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={6}
+      </div>
+      <WithStyles(Typography)
+        component="h5"
+        variant="h5"
       >
-        <WithStyles(Typography)
-          component="h5"
-          variant="h5"
-        >
-          Quick Facts
-        </WithStyles(Typography)>
-        <WithStyles(Divider)
-          className="divider"
-        />
-        <div
-          className="list"
-        >
-          <WithStyles(List)>
-            <WithStyles(ListItem)
-              divider={true}
-              key="Location"
-            >
-              <WithStyles(ListItemAvatar)>
-                <WithStyles(Avatar)>
-                  <pure(HomeIcon) />
-                </WithStyles(Avatar)>
-              </WithStyles(ListItemAvatar)>
-              <WithStyles(ListItemText)
-                primary="Location"
-                secondary="Portland, Oregon"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              divider={true}
-              key="Job Title"
-            >
-              <WithStyles(ListItemAvatar)>
-                <WithStyles(Avatar)>
-                  <pure(WorkIcon) />
-                </WithStyles(Avatar)>
-              </WithStyles(ListItemAvatar)>
-              <WithStyles(ListItemText)
-                primary="Job Title"
-                secondary="Software Engineer at Moovel North America"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              divider={false}
-              key="Education"
-            >
-              <WithStyles(ListItemAvatar)>
-                <WithStyles(Avatar)>
-                  <pure(SchoolIcon) />
-                </WithStyles(Avatar)>
-              </WithStyles(ListItemAvatar)>
-              <WithStyles(ListItemText)
-                primary="Education"
-                secondary="BA in Computer Science, Univeristy of Missouri"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              divider={true}
-              key="BS in Information Technology, Univeristy of Missouri"
-            >
-              <WithStyles(ListItemText)
-                inset={true}
-                secondary="BS in Information Technology, Univeristy of Missouri"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              divider={false}
-              key="Technologies"
-            >
-              <WithStyles(ListItemAvatar)>
-                <WithStyles(Avatar)>
-                  <pure(BuildIcon) />
-                </WithStyles(Avatar)>
-              </WithStyles(ListItemAvatar)>
-              <WithStyles(ListItemText)
-                primary="Technologies"
-                secondary="NodeJS, Typescript, React, Redux, Express, HapiJS"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              divider={true}
-              key="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
-            >
-              <WithStyles(ListItemText)
-                inset={true}
-                secondary="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              component="a"
-              divider={true}
-              href="http://github.com/chrisdopuch"
-              key="Github Profile"
-            >
-              <WithStyles(ListItemAvatar)>
-                <WithStyles(Avatar)>
-                  <pure(CodeIcon) />
-                </WithStyles(Avatar)>
-              </WithStyles(ListItemAvatar)>
-              <WithStyles(ListItemText)
-                primary="Github Profile"
-                secondary="http://github.com/chrisdopuch"
-              />
-            </WithStyles(ListItem)>
-          </WithStyles(List)>
-        </div>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        Quick Facts
+      </WithStyles(Typography)>
+      <WithStyles(Divider)
+        className="divider"
+      />
+      <div
+        className="list"
+      >
+        <WithStyles(List)>
+          <WithStyles(ListItem)
+            divider={true}
+            key="Location"
+          >
+            <WithStyles(ListItemAvatar)>
+              <WithStyles(Avatar)>
+                <pure(HomeIcon) />
+              </WithStyles(Avatar)>
+            </WithStyles(ListItemAvatar)>
+            <WithStyles(ListItemText)
+              primary="Location"
+              secondary="Portland, Oregon"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            divider={true}
+            key="Job Title"
+          >
+            <WithStyles(ListItemAvatar)>
+              <WithStyles(Avatar)>
+                <pure(WorkIcon) />
+              </WithStyles(Avatar)>
+            </WithStyles(ListItemAvatar)>
+            <WithStyles(ListItemText)
+              primary="Job Title"
+              secondary="Software Engineer at Moovel North America"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            divider={false}
+            key="Education"
+          >
+            <WithStyles(ListItemAvatar)>
+              <WithStyles(Avatar)>
+                <pure(SchoolIcon) />
+              </WithStyles(Avatar)>
+            </WithStyles(ListItemAvatar)>
+            <WithStyles(ListItemText)
+              primary="Education"
+              secondary="BA in Computer Science, Univeristy of Missouri"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            divider={true}
+            key="BS in Information Technology, Univeristy of Missouri"
+          >
+            <WithStyles(ListItemText)
+              inset={true}
+              secondary="BS in Information Technology, Univeristy of Missouri"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            divider={false}
+            key="Technologies"
+          >
+            <WithStyles(ListItemAvatar)>
+              <WithStyles(Avatar)>
+                <pure(BuildIcon) />
+              </WithStyles(Avatar)>
+            </WithStyles(ListItemAvatar)>
+            <WithStyles(ListItemText)
+              primary="Technologies"
+              secondary="NodeJS, Typescript, React, Redux, Express, HapiJS"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            divider={true}
+            key="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+          >
+            <WithStyles(ListItemText)
+              inset={true}
+              secondary="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+            />
+          </WithStyles(ListItem)>
+          <WithStyles(ListItem)
+            component="a"
+            divider={true}
+            href="http://github.com/chrisdopuch"
+            key="Github Profile"
+          >
+            <WithStyles(ListItemAvatar)>
+              <WithStyles(Avatar)>
+                <pure(CodeIcon) />
+              </WithStyles(Avatar)>
+            </WithStyles(ListItemAvatar)>
+            <WithStyles(ListItemText)
+              primary="Github Profile"
+              secondary="http://github.com/chrisdopuch"
+            />
+          </WithStyles(ListItem)>
+        </WithStyles(List)>
+      </div>
+    </Hidden>
   </WithStyles(Paper)>
 </div>
 `;

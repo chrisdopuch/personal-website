@@ -33,7 +33,7 @@ const stylesDeclarations = (theme: Theme) =>
       padding: theme.spacing.unit * 3,
     },
     drawer: {
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         flexShrink: 0,
         width: drawerWidth,
       },
@@ -43,7 +43,7 @@ const stylesDeclarations = (theme: Theme) =>
     },
     menuButton: {
       marginRight: 20,
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('md')]: {
         display: 'none',
       },
     },
@@ -137,7 +137,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
         </AppBar>
         <nav className={classes.drawer}>
           {/* The implementation can be swap with js to avoid SEO duplication of links. */}
-          <Hidden smUp={true} implementation="css">
+          <Hidden mdUp={true} implementation="css">
             <Drawer
               variant="temporary"
               anchor={theme.direction === 'rtl' ? 'right' : 'left'}
@@ -153,7 +153,7 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
               {drawer}
             </Drawer>
           </Hidden>
-          <Hidden xsDown={true} implementation="css">
+          <Hidden smDown={true} implementation="css">
             <Drawer
               classes={{
                 paper: classes.drawerPaper,
