@@ -87,7 +87,7 @@ const Gallery = () => {
   return <Typography variant="h5">Gallery</Typography>;
 };
 
-class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsiveDrawerState> {
+export class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsiveDrawerState> {
   public constructor(props: IResponsiveDrawerProps) {
     super(props);
     this.state = {
