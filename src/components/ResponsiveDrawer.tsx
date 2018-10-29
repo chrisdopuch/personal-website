@@ -22,6 +22,14 @@ import { Follow } from 'react-twitter-widgets';
 import About from './pages/About';
 import Home from './pages/Home';
 
+// interface IPerson {
+//   name: string;
+// }
+
+// const data = {
+//   person: { name: 'Jill' } as IPerson,
+// };
+
 const drawerWidth = 240;
 
 const stylesDeclarations = (theme: Theme) =>
