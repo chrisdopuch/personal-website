@@ -42,9 +42,6 @@ const stylesDeclarations = (theme: Theme) =>
     drawerPaper: {
       width: drawerWidth,
     },
-    follow: {
-      margin: '20px 10px',
-    },
     menuButton: {
       marginRight: 20,
       [theme.breakpoints.up('md')]: {
@@ -54,7 +51,14 @@ const stylesDeclarations = (theme: Theme) =>
     root: {
       display: 'flex',
     },
+    social: {
+      margin: '20px 10px',
+      textAlign: 'left',
+    },
     toolbar: theme.mixins.toolbar,
+    twitter: {
+      marginBottom: '10px',
+    },
   });
 
 interface IResponsiveDrawerState {
@@ -120,8 +124,13 @@ export class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IR
           })}
         </List>
         <Divider />
-        <div className={classes.follow}>
-          <Follow username="chrisdopuch" />
+        <div className={classes.social}>
+          <div className={classes.twitter}>
+            <Follow username="chrisdopuch" />
+          </div>
+          <a className="github-button" href="https://github.com/chrisdopuch" aria-label="Follow @chrisdopuch on GitHub">
+            Follow @chrisdopuch
+          </a>
         </div>
       </div>
     );

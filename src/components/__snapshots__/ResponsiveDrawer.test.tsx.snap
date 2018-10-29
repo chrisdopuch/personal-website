@@ -123,13 +123,24 @@ exports[`ResponsiveDrawer renders default props 1`] = `
           </WithStyles(List)>
           <WithStyles(Divider) />
           <div
-            className="follow"
+            className="social"
           >
-            <Follow
-              onLoad={[Function]}
-              options={Object {}}
-              username="chrisdopuch"
-            />
+            <div
+              className="twitter"
+            >
+              <Follow
+                onLoad={[Function]}
+                options={Object {}}
+                username="chrisdopuch"
+              />
+            </div>
+            <a
+              aria-label="Follow @chrisdopuch on GitHub"
+              className="github-button"
+              href="https://github.com/chrisdopuch"
+            >
+              Follow @chrisdopuch
+            </a>
           </div>
         </div>
       </WithStyles(Drawer)>
@@ -221,13 +232,24 @@ exports[`ResponsiveDrawer renders default props 1`] = `
           </WithStyles(List)>
           <WithStyles(Divider) />
           <div
-            className="follow"
+            className="social"
           >
-            <Follow
-              onLoad={[Function]}
-              options={Object {}}
-              username="chrisdopuch"
-            />
+            <div
+              className="twitter"
+            >
+              <Follow
+                onLoad={[Function]}
+                options={Object {}}
+                username="chrisdopuch"
+              />
+            </div>
+            <a
+              aria-label="Follow @chrisdopuch on GitHub"
+              className="github-button"
+              href="https://github.com/chrisdopuch"
+            >
+              Follow @chrisdopuch
+            </a>
           </div>
         </div>
       </WithStyles(Drawer)>
