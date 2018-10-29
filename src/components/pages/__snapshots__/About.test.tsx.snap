@@ -170,11 +170,11 @@ exports[`About Component should render with default props 1`] = `
       lgUp={false}
       mdDown={false}
       mdUp={false}
-      smDown={false}
+      smDown={true}
       smUp={false}
       xlDown={false}
       xlUp={false}
-      xsDown={true}
+      xsDown={false}
       xsUp={false}
     >
       <WithStyles(Grid)
@@ -313,9 +313,9 @@ exports[`About Component should render with default props 1`] = `
       lgDown={false}
       lgUp={false}
       mdDown={false}
-      mdUp={false}
+      mdUp={true}
       smDown={false}
-      smUp={true}
+      smUp={false}
       xlDown={false}
       xlUp={false}
       xsDown={false}
