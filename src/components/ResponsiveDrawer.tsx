@@ -18,6 +18,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { ComponentType } from 'react';
 import { Link, Route } from 'react-router-dom';
+import { Follow } from 'react-twitter-widgets';
 import About from './pages/About';
 import Home from './pages/Home';
 
@@ -40,6 +41,9 @@ const stylesDeclarations = (theme: Theme) =>
     },
     drawerPaper: {
       width: drawerWidth,
+    },
+    follow: {
+      margin: '20px 10px',
     },
     menuButton: {
       marginRight: 20,
@@ -115,6 +119,10 @@ class ResponsiveDrawer extends React.Component<IResponsiveDrawerProps, IResponsi
             );
           })}
         </List>
+        <Divider />
+        <div className={classes.follow}>
+          <Follow username="chrisdopuch" />
+        </div>
       </div>
     );
 

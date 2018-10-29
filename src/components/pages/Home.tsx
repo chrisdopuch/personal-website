@@ -1,3 +1,4 @@
+import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -10,6 +11,10 @@ const stylesDeclarations = (theme: Theme) =>
       from: { transform: 'rotate(0deg)' },
       to: { transform: 'rotate(360deg)' },
     },
+    divider: {
+      marginBottom: '10px',
+      marginTop: '10px',
+    },
     face: {
       animation: 'face-spin infinite 20s linear',
       borderRadius: '50%',
@@ -21,7 +26,9 @@ const stylesDeclarations = (theme: Theme) =>
     },
     root: {
       paddingBottom: theme.spacing.unit * 2,
-      paddingTop: theme.spacing.unit * 2,
+      paddingLeft: theme.spacing.unit * 2,
+      paddingRight: theme.spacing.unit * 3,
+      paddingTop: theme.spacing.unit * 3,
       ...theme.mixins.gutters(),
     },
   });
@@ -33,6 +40,8 @@ export class Home extends React.Component<IHomeProps> {
     const { classes } = this.props;
     return (
       <Paper className={classes.root} elevation={1}>
+        <Typography variant="h2">Home</Typography>
+        <Divider className={classes.divider} />
         <img src={me} className={classes.face} alt="my-face" />
         <Typography variant="body1">I wrote enough React to make my head spin!</Typography>
         <Typography variant="body1">More content to come soon...</Typography>

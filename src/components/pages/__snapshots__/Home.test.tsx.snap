@@ -4,8 +4,9 @@ exports[`Home should render with default props 1`] = `
 <Home
   classes={
     Object {
-      "face": "Home-face-1",
-      "root": "Home-root-2",
+      "divider": "Home-divider-1",
+      "face": "Home-face-2",
+      "root": "Home-root-3",
     }
   }
   theme={
