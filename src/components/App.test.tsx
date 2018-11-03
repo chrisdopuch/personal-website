@@ -4,15 +4,26 @@ import React from 'react';
 import { App } from './App';
 
 const appTheme = createMuiTheme({
+  breakpoints: {
+    up: jest.fn(),
+  },
+  spacing: {
+    unit: 1,
+  },
   typography: {
     useNextVariants: true,
+  },
+  zIndex: {
+    drawer: 1,
   },
 });
 
 function getDefaultProps() {
   return {
     classes: {
+      content: 'content',
       root: 'root',
+      toolbar: 'toolbar',
     },
     theme: appTheme,
     title: 'test',

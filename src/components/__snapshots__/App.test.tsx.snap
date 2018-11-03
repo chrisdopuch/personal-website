@@ -17,7 +17,26 @@ exports[`App renders default props 1`] = `
             "xl",
           ],
           "only": [Function],
-          "up": [Function],
+          "up": [MockFunction] {
+            "calls": Array [
+              Array [
+                "xs",
+              ],
+              Array [
+                "sm",
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          },
           "values": Object {
             "lg": 1280,
             "md": 960,
@@ -31,13 +50,13 @@ exports[`App renders default props 1`] = `
         "mixins": Object {
           "gutters": [Function],
           "toolbar": Object {
-            "@media (min-width:0px) and (orientation: landscape)": Object {
-              "minHeight": 48,
-            },
-            "@media (min-width:600px)": Object {
+            "minHeight": 56,
+            "undefined": Object {
               "minHeight": 64,
             },
-            "minHeight": 56,
+            "undefined and (orientation: landscape)": Object {
+              "minHeight": 48,
+            },
           },
         },
         "overrides": Object {},
@@ -137,7 +156,7 @@ exports[`App renders default props 1`] = `
           "borderRadius": 4,
         },
         "spacing": Object {
-          "unit": 8,
+          "unit": 1,
         },
         "transitions": Object {
           "create": [Function],
@@ -363,7 +382,7 @@ exports[`App renders default props 1`] = `
         },
         "zIndex": Object {
           "appBar": 1100,
-          "drawer": 1200,
+          "drawer": 1,
           "mobileStepper": 1000,
           "modal": 1300,
           "snackbar": 1400,
@@ -376,9 +395,74 @@ exports[`App renders default props 1`] = `
       <div
         className="root"
       >
-        <WithStyles(ResponsiveDrawer)
+        <WithStyles(TitleBar)
           title="test"
         />
+        <WithStyles(NavDrawer)
+          items={
+            Array [
+              Object {
+                "Icon": [Function],
+                "isRouteExact": true,
+                "label": "Home",
+                "page": [Function],
+                "to": "/",
+              },
+              Object {
+                "Icon": [Function],
+                "isRouteExact": false,
+                "label": "About me",
+                "page": [Function],
+                "to": "/about",
+              },
+              Object {
+                "Icon": [Function],
+                "isRouteExact": false,
+                "label": "Gallery",
+                "page": [Function],
+                "to": "/gallery",
+              },
+              Object {
+                "Icon": [Function],
+                "isRouteExact": false,
+                "label": "Projects",
+                "page": [Function],
+                "to": "/projects",
+              },
+            ]
+          }
+        />
+        <main
+          className="content"
+        >
+          <div
+            className="toolbar"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="/"
+            path="/"
+          />
+          <Route
+            component={[Function]}
+            exact={false}
+            key="/about"
+            path="/about"
+          />
+          <Route
+            component={[Function]}
+            exact={false}
+            key="/gallery"
+            path="/gallery"
+          />
+          <Route
+            component={[Function]}
+            exact={false}
+            key="/projects"
+            path="/projects"
+          />
+        </main>
       </div>
     </BrowserRouter>
   </MuiThemeProvider>

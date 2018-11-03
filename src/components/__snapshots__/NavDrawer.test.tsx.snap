@@ -1,31 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ResponsiveDrawer renders default props 1`] = `
-<div
-  className="root"
+exports[`NavDrawer snapshots renders default props 1`] = `
+<MuiThemeProvider
+  theme={Object {}}
 >
-  <WithStyles(AppBar)
-    className="appBar"
-    position="fixed"
+  <nav
+    className="drawer"
   >
-    <WithStyles(Toolbar)>
-      <WithStyles(IconButton)
-        aria-label="Open drawer"
-        className="menuButton"
-        color="inherit"
-        onClick={[Function]}
+    <Hidden
+      implementation="css"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={true}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Drawer)
+        ModalProps={
+          Object {
+            "keepMounted": true,
+          }
+        }
+        anchor="left"
+        classes={
+          Object {
+            "paper": "drawerPaper",
+          }
+        }
+        onClose={[Function]}
+        open={false}
+        variant="temporary"
       >
-        <pure(MenuIcon) />
-      </WithStyles(IconButton)>
-      <WithStyles(Typography)
-        color="inherit"
-        noWrap={true}
-        variant="h6"
+        <div>
+          <div
+            className="toolbar"
+          />
+          <WithStyles(Divider) />
+          <WithStyles(List) />
+          <WithStyles(Divider) />
+          <div
+            className="social"
+          >
+            <div
+              className="twitter"
+            >
+              <Follow
+                onLoad={[Function]}
+                options={Object {}}
+                username="chrisdopuch"
+              />
+            </div>
+            <a
+              aria-label="Follow @chrisdopuch on GitHub"
+              className="github-button"
+              href="https://github.com/chrisdopuch"
+            >
+              Follow @chrisdopuch
+            </a>
+          </div>
+        </div>
+      </WithStyles(Drawer)>
+    </Hidden>
+    <Hidden
+      implementation="css"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(Drawer)
+        classes={
+          Object {
+            "paper": "drawerPaper",
+          }
+        }
+        open={true}
+        variant="permanent"
       >
-        test
-      </WithStyles(Typography)>
-    </WithStyles(Toolbar)>
-  </WithStyles(AppBar)>
+        <div>
+          <div
+            className="toolbar"
+          />
+          <WithStyles(Divider) />
+          <WithStyles(List) />
+          <WithStyles(Divider) />
+          <div
+            className="social"
+          >
+            <div
+              className="twitter"
+            >
+              <Follow
+                onLoad={[Function]}
+                options={Object {}}
+                username="chrisdopuch"
+              />
+            </div>
+            <a
+              aria-label="Follow @chrisdopuch on GitHub"
+              className="github-button"
+              href="https://github.com/chrisdopuch"
+            >
+              Follow @chrisdopuch
+            </a>
+          </div>
+        </div>
+      </WithStyles(Drawer)>
+    </Hidden>
+  </nav>
+</MuiThemeProvider>
+`;
+
+exports[`NavDrawer snapshots renders with items 1`] = `
+<MuiThemeProvider
+  theme={Object {}}
+>
   <nav
     className="drawer"
   >
@@ -72,7 +172,7 @@ exports[`ResponsiveDrawer renders default props 1`] = `
               to="/"
             >
               <WithStyles(ListItemIcon)>
-                <pure(HomeIcon) />
+                <mockConstructor />
               </WithStyles(ListItemIcon)>
               <WithStyles(ListItemText)
                 primary="Home"
@@ -86,38 +186,10 @@ exports[`ResponsiveDrawer renders default props 1`] = `
               to="/about"
             >
               <WithStyles(ListItemIcon)>
-                <pure(HelpIcon) />
+                <mockConstructor />
               </WithStyles(ListItemIcon)>
               <WithStyles(ListItemText)
                 primary="About me"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              button={true}
-              component={[Function]}
-              key="Gallery"
-              onClick={[Function]}
-              to="/gallery"
-            >
-              <WithStyles(ListItemIcon)>
-                <pure(CameraIcon) />
-              </WithStyles(ListItemIcon)>
-              <WithStyles(ListItemText)
-                primary="Gallery"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              button={true}
-              component={[Function]}
-              key="Projects"
-              onClick={[Function]}
-              to="/projects"
-            >
-              <WithStyles(ListItemIcon)>
-                <pure(CodeIcon) />
-              </WithStyles(ListItemIcon)>
-              <WithStyles(ListItemText)
-                primary="Projects"
               />
             </WithStyles(ListItem)>
           </WithStyles(List)>
@@ -181,7 +253,7 @@ exports[`ResponsiveDrawer renders default props 1`] = `
               to="/"
             >
               <WithStyles(ListItemIcon)>
-                <pure(HomeIcon) />
+                <mockConstructor />
               </WithStyles(ListItemIcon)>
               <WithStyles(ListItemText)
                 primary="Home"
@@ -195,38 +267,10 @@ exports[`ResponsiveDrawer renders default props 1`] = `
               to="/about"
             >
               <WithStyles(ListItemIcon)>
-                <pure(HelpIcon) />
+                <mockConstructor />
               </WithStyles(ListItemIcon)>
               <WithStyles(ListItemText)
                 primary="About me"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              button={true}
-              component={[Function]}
-              key="Gallery"
-              onClick={[Function]}
-              to="/gallery"
-            >
-              <WithStyles(ListItemIcon)>
-                <pure(CameraIcon) />
-              </WithStyles(ListItemIcon)>
-              <WithStyles(ListItemText)
-                primary="Gallery"
-              />
-            </WithStyles(ListItem)>
-            <WithStyles(ListItem)
-              button={true}
-              component={[Function]}
-              key="Projects"
-              onClick={[Function]}
-              to="/projects"
-            >
-              <WithStyles(ListItemIcon)>
-                <pure(CodeIcon) />
-              </WithStyles(ListItemIcon)>
-              <WithStyles(ListItemText)
-                primary="Projects"
               />
             </WithStyles(ListItem)>
           </WithStyles(List)>
@@ -255,29 +299,5 @@ exports[`ResponsiveDrawer renders default props 1`] = `
       </WithStyles(Drawer)>
     </Hidden>
   </nav>
-  <main
-    className="content"
-  >
-    <div
-      className="toolbar"
-    />
-    <Route
-      component={[Function]}
-      exact={true}
-      path="/"
-    />
-    <Route
-      component={[Function]}
-      path="/about"
-    />
-    <Route
-      component={[Function]}
-      path="/gallery"
-    />
-    <Route
-      component={[Function]}
-      path="/projects"
-    />
-  </main>
-</div>
+</MuiThemeProvider>
 `;
