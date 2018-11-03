@@ -72,7 +72,7 @@ export class About extends Component<IAboutProps> {
   public renderHeader() {
     const { classes } = this.props;
     return (
-      <Fragment>
+      <header>
         <Typography variant="h2" component="h3">
           About me
         </Typography>
@@ -85,7 +85,7 @@ export class About extends Component<IAboutProps> {
           movies, going to heavy metal concerts, drawing, and painting. On this site you can find many examples of my
           work including my art gallery as well as many of my programming projects.
         </Typography>
-      </Fragment>
+      </header>
     );
   }
 
@@ -168,25 +168,27 @@ export class About extends Component<IAboutProps> {
     const { classes } = this.props;
 
     return (
-      <div>
+      <article>
         <Paper className={classes.root} elevation={1}>
           {this.renderHeader()}
-          <Hidden smDown={true} implementation="css">
-            <Grid container={true} spacing={24} className={classes.gridContainer}>
-              <Grid item={true} xs={6}>
-                {this.renderAvatar()}
+          <body>
+            <Hidden smDown={true} implementation="css">
+              <Grid container={true} spacing={24} className={classes.gridContainer}>
+                <Grid item={true} xs={6}>
+                  {this.renderAvatar()}
+                </Grid>
+                <Grid item={true} xs={6}>
+                  {this.renderQuickFacts()}
+                </Grid>
               </Grid>
-              <Grid item={true} xs={6}>
-                {this.renderQuickFacts()}
-              </Grid>
-            </Grid>
-          </Hidden>
-          <Hidden mdUp={true} implementation="css">
-            {this.renderAvatar()}
-            {this.renderQuickFacts()}
-          </Hidden>
+            </Hidden>
+            <Hidden mdUp={true} implementation="css">
+              {this.renderAvatar()}
+              {this.renderQuickFacts()}
+            </Hidden>
+          </body>
         </Paper>
-      </div>
+      </article>
     );
   }
 }
