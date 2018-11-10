@@ -4,7 +4,8 @@ import { createStyles, Theme, WithStyles, withStyles } from '@material-ui/core/s
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
-import React from 'react';
+import React, { SFC } from 'react';
+import { useStore } from 'react-hookstore';
 import { appTheme } from './App';
 
 const stylesDeclarations = (theme: Theme) => {
@@ -21,33 +22,35 @@ const stylesDeclarations = (theme: Theme) => {
   });
 };
 
-interface ITitleBarProps extends WithStyles<typeof stylesDeclarations> {
+interface ITitleBarProps extends WithStyles<typeof stylesDeclarations, true> {
   title: string;
-  handleMenuClick: () => void;
 }
 
-export class TitleBar extends React.Component<ITitleBarProps> {
-  public static defaultProps = {
-    handleMenuClick: () => undefined,
-    theme: appTheme,
-  };
+export const TitleBar: SFC<ITitleBarProps> = (props) => {
+  const { classes, title } = props;
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useStore();
 
-  public render() {
-    const { classes, title, handleMenuClick } = this.props;
+  return (
+    <AppBar position="fixed" className={classes.appBar}>
+      <Toolbar>
+        <IconButton
+          color="inherit"
+          aria-label="Open drawer"
+          onClick={() => setIsMobileDrawerOpen(!isMobileDrawerOpen)} // tslint:disable-line
+          className={classes.menuButton}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h6" color="inherit" noWrap={true}>
+          {title}
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
-    return (
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <IconButton color="inherit" aria-label="Open drawer" onClick={handleMenuClick} className={classes.menuButton}>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" noWrap={true}>
-            {title}
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    );
-  }
-}
+TitleBar.defaultProps = {
+  theme: appTheme,
+};
 
 export default withStyles(stylesDeclarations, { withTheme: true })(TitleBar);

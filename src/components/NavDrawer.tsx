@@ -7,7 +7,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { createStyles, MuiThemeProvider, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
-import React, { ComponentType } from 'react';
+import React, { ComponentType, SFC } from 'react';
+import { useStore } from 'react-hookstore';
 import { Link } from 'react-router-dom';
 import { Follow } from 'react-twitter-widgets';
 import { appTheme } from './App';
@@ -45,102 +46,88 @@ interface INavDrawerProps extends WithStyles<typeof stylesDeclarations> {
   theme: Theme;
 }
 
-interface INavDrawerState {
-  mobileDrawerOpen: boolean;
-}
+export const NavDrawer: SFC<INavDrawerProps> = (props) => {
+  const { classes, theme } = props;
+  const [isMobileDrawerOpen, setisMobileDrawerOpen] = useStore();
 
-export class NavDrawer extends React.Component<INavDrawerProps, INavDrawerState> {
-  public static defaultProps = {
-    theme: appTheme,
-  };
+  return (
+    <MuiThemeProvider theme={theme}>
+      <nav className={classes.drawer}>
+        {/* The implementation can be swap with js to avoid SEO duplication of links. */}
+        <Hidden mdUp={true} implementation="css">
+          <Drawer
+            variant="temporary"
+            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            open={isMobileDrawerOpen}
+            onClose={() => setisMobileDrawerOpen(false)} // tslint:disable-line
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+          >
+            <DrawerContent {...props} />
+          </Drawer>
+        </Hidden>
+        <Hidden smDown={true} implementation="css">
+          <Drawer
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            variant="permanent"
+            open={true}
+          >
+            <DrawerContent {...props} />
+          </Drawer>
+        </Hidden>
+      </nav>
+    </MuiThemeProvider>
+  );
+};
 
-  public constructor(props: INavDrawerProps) {
-    super(props);
-    this.state = {
-      mobileDrawerOpen: false,
-    };
-  }
+NavDrawer.defaultProps = {
+  theme: appTheme,
+};
 
-  public handleDrawerToggle = () => {
-    this.setState((state) => ({ mobileDrawerOpen: !state.mobileDrawerOpen }));
-  };
+const DrawerContent: SFC<INavDrawerProps> = (props) => {
+  const { classes, items } = props;
+  const setisMobileDrawerOpen = useStore()[1];
 
-  public handleLinkClick = () => {
-    this.setState({
-      mobileDrawerOpen: false,
-    });
-  };
-
-  public renderDrawerContent() {
-    const { classes, items } = this.props;
-    return (
-      <div>
-        <div className={classes.toolbar} />
-        <Divider />
-        <List>
-          {items.map(({ label, to, Icon }) => {
-            const linkProps = { to } as any;
-            return (
-              <ListItem onClick={this.handleLinkClick} button={true} key={label} component={Link} {...linkProps}>
-                <ListItemIcon>
-                  <Icon />
-                </ListItemIcon>
-                <ListItemText primary={label} />
-              </ListItem>
-            );
-          })}
-        </List>
-        <Divider />
-        <div className={classes.social}>
-          <div className={classes.twitter}>
-            <Follow username="chrisdopuch" />
-          </div>
-          <a className="github-button" href="https://github.com/chrisdopuch" aria-label="Follow @chrisdopuch on GitHub">
-            Follow @chrisdopuch
-          </a>
+  return (
+    <div>
+      <div className={classes.toolbar} />
+      <Divider />
+      <List>
+        {items.map(({ label, to, Icon }) => {
+          const linkProps = { to } as any;
+          return (
+            <ListItem
+              onClick={() => setisMobileDrawerOpen(false)} // tslint:disable-line
+              button={true}
+              key={label}
+              component={Link}
+              {...linkProps}
+            >
+              <ListItemIcon>
+                <Icon />
+              </ListItemIcon>
+              <ListItemText primary={label} />
+            </ListItem>
+          );
+        })}
+      </List>
+      <Divider />
+      <div className={classes.social}>
+        <div className={classes.twitter}>
+          <Follow username="chrisdopuch" />
         </div>
+        <a className="github-button" href="https://github.com/chrisdopuch" aria-label="Follow @chrisdopuch on GitHub">
+          Follow @chrisdopuch
+        </a>
       </div>
-    );
-  }
-
-  public render() {
-    const { classes, theme } = this.props;
-
-    return (
-      <MuiThemeProvider theme={theme}>
-        <nav className={classes.drawer}>
-          {/* The implementation can be swap with js to avoid SEO duplication of links. */}
-          <Hidden mdUp={true} implementation="css">
-            <Drawer
-              variant="temporary"
-              anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-              open={this.state.mobileDrawerOpen}
-              onClose={this.handleDrawerToggle}
-              classes={{
-                paper: classes.drawerPaper,
-              }}
-              ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-              }}
-            >
-              {this.renderDrawerContent()}
-            </Drawer>
-          </Hidden>
-          <Hidden smDown={true} implementation="css">
-            <Drawer
-              classes={{
-                paper: classes.drawerPaper,
-              }}
-              variant="permanent"
-              open={true}
-            >
-              {this.renderDrawerContent()}
-            </Drawer>
-          </Hidden>
-        </nav>
-      </MuiThemeProvider>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default withStyles(stylesDeclarations, { withTheme: true })(NavDrawer);

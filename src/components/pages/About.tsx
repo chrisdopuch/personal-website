@@ -171,22 +171,20 @@ export class About extends Component<IAboutProps> {
       <article>
         <Paper className={classes.root} elevation={1}>
           {this.renderHeader()}
-          <body>
-            <Hidden smDown={true} implementation="css">
-              <Grid container={true} spacing={24} className={classes.gridContainer}>
-                <Grid item={true} xs={6}>
-                  {this.renderAvatar()}
-                </Grid>
-                <Grid item={true} xs={6}>
-                  {this.renderQuickFacts()}
-                </Grid>
+          <Hidden smDown={true} implementation="css">
+            <Grid container={true} spacing={24} className={classes.gridContainer}>
+              <Grid item={true} xs={6}>
+                {this.renderAvatar()}
               </Grid>
-            </Hidden>
-            <Hidden mdUp={true} implementation="css">
-              {this.renderAvatar()}
-              {this.renderQuickFacts()}
-            </Hidden>
-          </body>
+              <Grid item={true} xs={6}>
+                {this.renderQuickFacts()}
+              </Grid>
+            </Grid>
+          </Hidden>
+          <Hidden mdUp={true} implementation="css">
+            {this.renderAvatar()}
+            {this.renderQuickFacts()}
+          </Hidden>
         </Paper>
       </article>
     );
