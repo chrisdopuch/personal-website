@@ -6,6 +6,7 @@ import { NavDrawer } from './NavDrawer';
 jest.mock('react-hookstore', () => {
   return { useStore: jest.fn(() => [true, jest.fn()]) };
 });
+
 function getDefaultProps() {
   return {
     classes: {

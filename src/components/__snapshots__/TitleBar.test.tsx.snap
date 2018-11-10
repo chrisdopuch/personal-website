@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleBar snapshots renders default props 1`] = `
+<WithStyles(AppBar)
+  className="appBar"
+  position="fixed"
+>
+  <WithStyles(Toolbar)>
+    <WithStyles(IconButton)
+      aria-label="Open drawer"
+      className="menuButton"
+      color="inherit"
+      onClick={[Function]}
+    >
+      <pure(MenuIcon) />
+    </WithStyles(IconButton)>
+    <WithStyles(Typography)
+      color="inherit"
+      noWrap={true}
+      variant="h6"
+    >
+      default title
+    </WithStyles(Typography)>
+  </WithStyles(Toolbar)>
+</WithStyles(AppBar)>
+`;
