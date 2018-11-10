@@ -395,10 +395,10 @@ exports[`App renders default props 1`] = `
       <div
         className="root"
       >
-        <WithStyles(TitleBar)
+        <WithStyles(Component)
           title="test"
         />
-        <WithStyles(NavDrawer)
+        <WithStyles(Component)
           items={
             Array [
               Object {

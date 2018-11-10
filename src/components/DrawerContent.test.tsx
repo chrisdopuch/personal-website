@@ -1,26 +1,28 @@
 import { Theme } from '@material-ui/core';
 import { shallow } from 'enzyme';
 import React from 'react';
-import { NavDrawer } from './NavDrawer';
+import { DrawerContent } from './DrawerContent';
 
 jest.mock('react-hookstore', () => {
   return { useStore: jest.fn(() => [true, jest.fn()]) };
 });
+
 function getDefaultProps() {
   return {
     classes: {
-      drawer: 'drawer',
-      drawerPaper: 'drawerPaper',
+      social: 'social',
+      toolbar: 'toolbar',
+      twitter: 'twitter',
     },
     items: [],
     theme: {} as Theme,
   };
 }
 
-describe('NavDrawer', () => {
+describe('DrawerContent', () => {
   describe('snapshots', () => {
     it('renders default props', () => {
-      const wrapper = shallow(<NavDrawer {...getDefaultProps()} />);
+      const wrapper = shallow(<DrawerContent {...getDefaultProps()} />);
 
       expect(wrapper).toMatchSnapshot();
     });
@@ -37,7 +39,7 @@ describe('NavDrawer', () => {
           { to: '/about', label: 'About me', Icon: MockHelpIcon, isRouteExact: false, page: MockAboutPage },
         ],
       };
-      const wrapper = shallow(<NavDrawer {...props} />);
+      const wrapper = shallow(<DrawerContent {...props} />);
 
       expect(wrapper).toMatchSnapshot();
     });

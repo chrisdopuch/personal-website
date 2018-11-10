@@ -60,16 +60,11 @@ export const appTheme = createMuiTheme({
   },
 });
 
-interface IAppProps extends WithStyles<typeof stylesDeclarations> {
+interface IAppProps extends WithStyles<typeof stylesDeclarations, true> {
   title: string;
-  theme: Theme;
 }
 
 export class App extends React.Component<IAppProps> {
-  public static defaultProps = {
-    theme: appTheme,
-  };
-
   public render() {
     const { classes, title, theme } = this.props;
 
