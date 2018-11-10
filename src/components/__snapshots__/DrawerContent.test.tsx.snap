@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DrawerContent snapshots renders default props 1`] = `
+<div>
+  <div
+    className="toolbar"
+  />
+  <WithStyles(Divider) />
+  <WithStyles(List) />
+  <WithStyles(Divider) />
+  <div
+    className="social"
+  >
+    <div
+      className="twitter"
+    >
+      <Follow
+        onLoad={[Function]}
+        options={Object {}}
+        username="chrisdopuch"
+      />
+    </div>
+    <a
+      aria-label="Follow @chrisdopuch on GitHub"
+      className="github-button"
+      href="https://github.com/chrisdopuch"
+    >
+      Follow @chrisdopuch
+    </a>
+  </div>
+</div>
+`;
+
+exports[`DrawerContent snapshots renders with items 1`] = `
+<div>
+  <div
+    className="toolbar"
+  />
+  <WithStyles(Divider) />
+  <WithStyles(List)>
+    <WithStyles(ListItem)
+      button={true}
+      component={[Function]}
+      key="Home"
+      onClick={[Function]}
+      to="/"
+    >
+      <WithStyles(ListItemIcon)>
+        <mockConstructor />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        primary="Home"
+      />
+    </WithStyles(ListItem)>
+    <WithStyles(ListItem)
+      button={true}
+      component={[Function]}
+      key="About me"
+      onClick={[Function]}
+      to="/about"
+    >
+      <WithStyles(ListItemIcon)>
+        <mockConstructor />
+      </WithStyles(ListItemIcon)>
+      <WithStyles(ListItemText)
+        primary="About me"
+      />
+    </WithStyles(ListItem)>
+  </WithStyles(List)>
+  <WithStyles(Divider) />
+  <div
+    className="social"
+  >
+    <div
+      className="twitter"
+    >
+      <Follow
+        onLoad={[Function]}
+        options={Object {}}
+        username="chrisdopuch"
+      />
+    </div>
+    <a
+      aria-label="Follow @chrisdopuch on GitHub"
+      className="github-button"
+      href="https://github.com/chrisdopuch"
+    >
+      Follow @chrisdopuch
+    </a>
+  </div>
+</div>
+`;
