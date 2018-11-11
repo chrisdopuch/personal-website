@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import GoogleAnalytics from 'react-ga';
 import { createStore } from 'react-hookstore';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
+
+// initialize google analytics tracking, only in producton mode
+GoogleAnalytics.initialize('UA-128558512-1', { testMode: process.env.NODE_ENV !== 'production' });
 
 // initialize the global hook store
 createStore({ state: false });

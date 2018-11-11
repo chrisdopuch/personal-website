@@ -1,6 +1,13 @@
 import { shallow } from 'enzyme';
+import { History, Location } from 'history';
 import React from 'react';
-import { About } from './About';
+import { match } from 'react-router';
+import withPageView from '../hooks/usePageView';
+import { About, Header, ProfilePicture, QuickFacts } from './About';
+
+jest.mock('../hooks/usePageView', () => {
+  return jest.fn();
+});
 
 const classes = {
   avatar: 'avatar',
@@ -11,39 +18,62 @@ const classes = {
   root: 'root',
 };
 
+const getDefaultProps = () => {
+  return {
+    classes,
+    history: {} as History,
+    location: {} as Location,
+    match: {} as match,
+  };
+};
+
 describe('About', () => {
-  describe('Component', () => {
+  describe('Main Component', () => {
     it('should render with default props', () => {
-      const wrapper = shallow(<About classes={classes} />);
+      const props = getDefaultProps();
+      const wrapper = shallow(<About {...props} />);
+
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should call the usePageView hook', () => {
+      const props = {
+        ...getDefaultProps(),
+        location: {
+          pathname: '/foo',
+          search: '?bar=baz',
+        } as Location,
+      };
+      shallow(<About {...props} />);
+
+      expect(withPageView).toBeCalledWith(props.location);
+    });
+  });
+
+  describe('ProfilePicture', () => {
+    it('should render with default props', () => {
+      const props = getDefaultProps();
+      const wrapper = shallow(<ProfilePicture {...props} />);
 
       expect(wrapper).toMatchSnapshot();
     });
   });
 
-  describe('#renderAvatar', () => {
-    it('should render the avatar', () => {
-      const wrapper = shallow<About>(<About classes={classes} />);
-      const rendered = wrapper.instance().renderAvatar();
+  describe('Header', () => {
+    it('should render with default props', () => {
+      const props = getDefaultProps();
+      const wrapper = shallow(<Header {...props} />);
 
-      expect(rendered).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
     });
   });
 
-  describe('#renderHeader', () => {
-    it('should render the header', () => {
-      const wrapper = shallow<About>(<About classes={classes} />);
-      const rendered = wrapper.instance().renderHeader();
+  describe('QuickFacts', () => {
+    it('should render with default props', () => {
+      const props = getDefaultProps();
+      const wrapper = shallow(<QuickFacts {...props} />);
 
-      expect(rendered).toMatchSnapshot();
-    });
-  });
-
-  describe('#renderQuickFacts', () => {
-    it('should render the quick facts list', () => {
-      const wrapper = shallow<About>(<About classes={classes} />);
-      const rendered = wrapper.instance().renderQuickFacts();
-
-      expect(rendered).toMatchSnapshot();
+      expect(wrapper).toMatchSnapshot();
     });
   });
 });
