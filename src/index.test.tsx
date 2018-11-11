@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import GoogleAnalytics from 'react-ga';
 import App from './components/App';
 import './index';
 import registerServiceWorker from './registerServiceWorker';
@@ -14,12 +15,22 @@ jest.mock('./registerServiceWorker', () => {
   return jest.fn();
 });
 
+jest.mock('react-ga', () => {
+  return {
+    initialize: jest.fn(),
+  };
+});
+
 describe('index', () => {
   it('should render', () => {
-    expect(render).toBeCalledWith(<App title="The Chris Dopuch Zone" />, null);
+    expect(render).toBeCalledWith(<App title="Dev: The Chris Dopuch Zone" />, null);
   });
 
   it('should register service worker', () => {
     expect(registerServiceWorker).toBeCalled();
+  });
+
+  it('should register Google Analytics', () => {
+    expect(GoogleAnalytics.initialize).toBeCalledWith('UA-128558512-1', { testMode: true });
   });
 });
