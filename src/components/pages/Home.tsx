@@ -2,8 +2,10 @@ import Divider from '@material-ui/core/Divider';
 import Paper from '@material-ui/core/Paper';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import React from 'react';
+import React, { SFC } from 'react';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import me from '../../images/me.jpg';
+import usePageView from '../hooks/usePageView';
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({
@@ -35,24 +37,23 @@ const stylesDeclarations = (theme: Theme) =>
 
 interface IHomeProps extends WithStyles<typeof stylesDeclarations> {}
 
-export class Home extends React.Component<IHomeProps> {
-  public render() {
-    const { classes } = this.props;
-    return (
-      <Paper className={classes.root} elevation={1}>
-        <Typography variant="h2">Home</Typography>
-        <Divider className={classes.divider} />
-        <img src={me} className={classes.face} alt="my-face" />
-        <Typography variant="body1">I wrote enough React to make my head spin!</Typography>
-        <Typography variant="body1">More content to come soon...</Typography>
-        <Typography variant="body1">
-          <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-        </Typography>
-      </Paper>
-    );
-  }
-}
+export const Home: SFC<IHomeProps & RouteComponentProps<any>> = (props) => {
+  const { classes, location } = props;
+  usePageView(location);
+  return (
+    <Paper className={classes.root} elevation={1}>
+      <Typography variant="h2">Home</Typography>
+      <Divider className={classes.divider} />
+      <img src={me} className={classes.face} alt="my-face" />
+      <Typography variant="body1">I wrote enough React to make my head spin!</Typography>
+      <Typography variant="body1">More content to come soon...</Typography>
+      <Typography variant="body1">
+        <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+          Learn React
+        </a>
+      </Typography>
+    </Paper>
+  );
+};
 
-export default withStyles(stylesDeclarations, { withTheme: true })(Home);
+export default withStyles(stylesDeclarations, { withTheme: true })(withRouter(Home));

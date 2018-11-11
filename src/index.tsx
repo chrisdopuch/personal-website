@@ -5,11 +5,15 @@ import { createStore } from 'react-hookstore';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 // initialize google analytics tracking, only in producton mode
-GoogleAnalytics.initialize('UA-128558512-1', { testMode: process.env.NODE_ENV !== 'production' });
+GoogleAnalytics.initialize('UA-128558512-1', { testMode: !isProduction });
 
 // initialize the global hook store
 createStore({ state: false });
 
-ReactDOM.render(<App title="The Chris Dopuch Zone" />, document.getElementById('root') as HTMLElement);
+ReactDOM.render(<App title={`${!isProduction ? 'Dev: ' : ''}The Chris Dopuch Zone`} />, document.getElementById(
+  'root'
+) as HTMLElement);
 registerServiceWorker();

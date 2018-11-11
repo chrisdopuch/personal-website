@@ -17,6 +17,7 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "jest",
+    "test:watch": "npm run test -- --watch",
     "eject": "react-scripts-ts eject",
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
