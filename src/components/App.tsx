@@ -17,18 +17,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import NavDrawer from './NavDrawer';
 import About from './pages/About';
+import Gallery from './pages/Gallery';
 import Home from './pages/Home';
 import TitleBar from './TitleBar';
 
 const Projects = () => (
   <Typography variant="h2" component="h3">
     Projects
-  </Typography>
-);
-
-const Gallery = () => (
-  <Typography variant="h2" component="h3">
-    Gallery
   </Typography>
 );
 
