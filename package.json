@@ -23,7 +23,7 @@
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "thumbnails": "thumb src/images src/thumbnails"
+    "thumbnails": "thumb -w 300 src/images src/thumbnails"
   },
   "devDependencies": {
     "@material-ui/icons": "^3.0.1",
