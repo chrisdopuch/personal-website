@@ -11,9 +11,9 @@ import blackDragons from '../../images/black-dragons.jpg';
 import butcher from '../../images/butcher.jpg';
 import capstoneProject from '../../images/capstone-project.jpg';
 import derwyd from '../../images/derwyd.jpg';
+import ekmuss from '../../images/ekmuss.jpg';
 import gamingRig from '../../images/gaming-rig.jpg';
 import gnoll from '../../images/gnoll.jpg';
-import ikmuss from '../../images/ikmuss.jpg';
 import juggernaut from '../../images/juggernaut.jpg';
 import laptopStickers from '../../images/laptop-stickers.jpg';
 import mandy from '../../images/mandy.jpg';
@@ -28,9 +28,9 @@ import blackDragonsThumb from '../../thumbnails/black-dragons_thumb.jpg';
 import butcherThumb from '../../thumbnails/butcher_thumb.jpg';
 import capstoneProjectThumb from '../../thumbnails/capstone-project_thumb.jpg';
 import derwydThumb from '../../thumbnails/derwyd_thumb.jpg';
+import ekmussThumb from '../../thumbnails/ekmuss_thumb.jpg';
 import gamingRigThumb from '../../thumbnails/gaming-rig_thumb.jpg';
 import gnollThumb from '../../thumbnails/gnoll_thumb.jpg';
-import ikmussThumb from '../../thumbnails/ikmuss_thumb.jpg';
 import juggernautThumb from '../../thumbnails/juggernaut_thumb.jpg';
 import laptopStickersThumb from '../../thumbnails/laptop-stickers_thumb.jpg';
 import mandyThumb from '../../thumbnails/mandy_thumb.jpg';
@@ -94,9 +94,9 @@ const IMAGES = shuffleArray([
     thumbnailWidth,
   },
   {
-    caption: "Ikmuss the Warlock (Friend's D&D Character, Reaper)",
-    src: ikmuss,
-    thumbnail: ikmussThumb,
+    caption: "Ekmuss the Warlock (Friend's D&D Character, Reaper)",
+    src: ekmuss,
+    thumbnail: ekmussThumb,
     thumbnailHeight: 400,
     thumbnailWidth,
   },
@@ -185,6 +185,9 @@ const stylesDeclarations = (theme: Theme) =>
       marginBottom: '10px',
       marginTop: '10px',
     },
+    header: {
+      marginBottom: '10px',
+    },
     root: {
       height: '100%',
       paddingBottom: theme.spacing.unit * 2,
@@ -203,7 +206,15 @@ export const Gallery: SFC<IGalleryProps & RouteComponentProps<any>> = (props) =>
   usePageView(location);
   return (
     <Paper className={classes.root} elevation={1}>
-      <Typography variant="h2">Gallery</Typography>
+      <Typography variant="h2" className={classes.header}>
+        Gallery
+      </Typography>
+      <Typography component="p">
+        Here you will find a collection of projects and passions of mine, from computing to painting and everything in
+        between. Miniature painting and drawing have been long-term interests of mine, and this gallery includes images
+        from my time playing Warhammer, Warmachine, and various tabletop RPGs. This gallery also exhibits some of my
+        various computing projects, from custom gaming rigs to autonomous flying vehicles.
+      </Typography>
       <Divider className={classes.divider} />
       <GridGallery images={IMAGES} enableImageSelection={false} />
     </Paper>
