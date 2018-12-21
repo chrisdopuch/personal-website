@@ -140,7 +140,6 @@ const stylesDeclarations = (theme: Theme) =>
       paddingTop: theme.spacing.unit * 3,
       ...theme.mixins.gutters(),
     },
-    thumbnail: {},
   });
 
 interface IGalleryProps extends WithStyles<typeof stylesDeclarations> {}

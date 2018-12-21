@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery should render with default props 1`] = `
+<WithStyles(Paper)
+  className="root"
+  elevation={1}
+>
+  <WithStyles(Typography)
+    className="header"
+    variant="h2"
+  >
+    Gallery
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    component="p"
+  >
+    Here you will find a collection of projects and passions of mine, from computing to painting and everything in between. Miniature painting and drawing have been long-term interests of mine, and this gallery includes images from my time playing Warhammer, Warmachine, and various tabletop RPGs. This gallery also exhibits some of my various computing projects, from custom gaming rigs to autonomous flying vehicles.
+  </WithStyles(Typography)>
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <Gallery
+    backdropClosesModal={false}
+    currentImage={0}
+    enableImageSelection={false}
+    enableKeyboardInput={true}
+    enableLightbox={true}
+    id="ReactGridGallery"
+    imageCountSeparator=" of "
+    images={
+      Array [
+        Object {
+          "caption": "Sorscha (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Derwyd the Druid (Friend's D&D Character, HeroForge)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "My custom-built gaming PC",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "CS Senior-Capstone UAV Computer Vision Project",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Vandana the Bard (Friend's D&D Character, Reaper)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Ekmuss the Warlock (Friend's D&D Character, Reaper)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 400,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Gnoll Leader (Reaper Bones)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Black Dragon Pikemen (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Some of my laptop sticker layouts from the past",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Juggernaut (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Vladimir (a Pathfinder OC of mine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 404,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Beast 09 (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Widowmakers (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "The Butcher (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Mandy (from the movie Mandy)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 200,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Ruin (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 169,
+          "thumbnailWidth": 300,
+        },
+        Object {
+          "caption": "Alexia and Valachev (Warmachine)",
+          "src": "test-file-stub",
+          "thumbnail": "test-file-stub",
+          "thumbnailHeight": 225,
+          "thumbnailWidth": 300,
+        },
+      ]
+    }
+    isOpen={false}
+    lightboxWidth={1024}
+    margin={2}
+    preloadNextImage={true}
+    rowHeight={180}
+    showCloseButton={true}
+    showImageCount={true}
+    showLightboxThumbnails={false}
+  />
+</WithStyles(Paper)>
+`;
