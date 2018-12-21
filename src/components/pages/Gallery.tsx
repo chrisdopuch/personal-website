@@ -5,166 +5,123 @@ import Typography from '@material-ui/core/Typography';
 import React, { SFC } from 'react';
 import GridGallery from 'react-grid-gallery';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import alexiaValachev from '../../images/alexia-valachev.jpg';
-import beast09 from '../../images/beast-09.jpg';
-import blackDragons from '../../images/black-dragons.jpg';
-import butcher from '../../images/butcher.jpg';
-import capstoneProject from '../../images/capstone-project.jpg';
-import derwyd from '../../images/derwyd.jpg';
-import ekmuss from '../../images/ekmuss.jpg';
-import gamingRig from '../../images/gaming-rig.jpg';
-import gnoll from '../../images/gnoll.jpg';
-import juggernaut from '../../images/juggernaut.jpg';
-import laptopStickers from '../../images/laptop-stickers.jpg';
-import mandy from '../../images/mandy.jpg';
-import ruin from '../../images/ruin.jpg';
-import sorscha from '../../images/sorscha.jpg';
-import vandana from '../../images/vandana.jpg';
-import vlad from '../../images/vlad.png';
-import widowmakers from '../../images/widowmakers.jpg';
-import alexiaValachevThumb from '../../thumbnails/alexia-valachev_thumb.jpg';
-import beast09Thumb from '../../thumbnails/beast-09_thumb.jpg';
-import blackDragonsThumb from '../../thumbnails/black-dragons_thumb.jpg';
-import butcherThumb from '../../thumbnails/butcher_thumb.jpg';
-import capstoneProjectThumb from '../../thumbnails/capstone-project_thumb.jpg';
-import derwydThumb from '../../thumbnails/derwyd_thumb.jpg';
-import ekmussThumb from '../../thumbnails/ekmuss_thumb.jpg';
-import gamingRigThumb from '../../thumbnails/gaming-rig_thumb.jpg';
-import gnollThumb from '../../thumbnails/gnoll_thumb.jpg';
-import juggernautThumb from '../../thumbnails/juggernaut_thumb.jpg';
-import laptopStickersThumb from '../../thumbnails/laptop-stickers_thumb.jpg';
-import mandyThumb from '../../thumbnails/mandy_thumb.jpg';
-import ruinThumb from '../../thumbnails/ruin_thumb.jpg';
-import sorschaThumb from '../../thumbnails/sorscha_thumb.jpg';
-import vandanaThumb from '../../thumbnails/vandana_thumb.jpg';
-import vladThumb from '../../thumbnails/vlad_thumb.png';
-import widowmakersThumb from '../../thumbnails/widowmakers_thumb.jpg';
 import { shuffleArray } from '../../utilities';
 import usePageView from '../hooks/usePageView';
 
 const thumbnailWidth = 300;
 
-const IMAGES = shuffleArray([
+interface IGalleryImage {
+  caption: string;
+  filename: string;
+  thumbnailHeight: number;
+  isPNG?: boolean;
+}
+
+const mapGalleryImagesForGrid = (img: IGalleryImage) => {
+  const { isPNG, filename, caption, thumbnailHeight } = img;
+  const src = isPNG ? require(`../../images/${filename}.png`) : require(`../../images/${filename}.jpg`);
+  const thumbnail = isPNG
+    ? require(`../../thumbnails/${filename}_thumb.png`)
+    : require(`../../thumbnails/${filename}_thumb.jpg`);
+  return {
+    caption,
+    src,
+    thumbnail,
+    thumbnailHeight,
+    thumbnailWidth,
+  };
+};
+
+const galleryImages: IGalleryImage[] = shuffleArray([
   {
     caption: 'Sorscha (Warmachine)',
-    src: sorscha,
-    thumbnail: sorschaThumb,
+    filename: 'sorscha',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: "Derwyd the Druid (Friend's D&D Character, HeroForge)",
-    src: derwyd,
-    thumbnail: derwydThumb,
+    filename: 'derwyd',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
   {
     caption: 'My custom-built gaming PC',
-    src: gamingRig,
-    thumbnail: gamingRigThumb,
+    filename: 'gaming-rig',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
   {
     caption: 'CS Senior-Capstone UAV Computer Vision Project',
-    src: capstoneProject,
-    thumbnail: capstoneProjectThumb,
+    filename: 'capstone-project',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: "Vandana the Bard (Friend's D&D Character, Reaper)",
-    src: vandana,
-    thumbnail: vandanaThumb,
+    filename: 'vandana',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
   {
     caption: "Ekmuss the Warlock (Friend's D&D Character, Reaper)",
-    src: ekmuss,
-    thumbnail: ekmussThumb,
+    filename: 'ekmuss',
     thumbnailHeight: 400,
-    thumbnailWidth,
   },
   {
     caption: 'Gnoll Leader (Reaper Bones)',
-    src: gnoll,
-    thumbnail: gnollThumb,
+    filename: 'gnoll',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
   {
     caption: 'Black Dragon Pikemen (Warmachine)',
-    src: blackDragons,
-    thumbnail: blackDragonsThumb,
+    filename: 'black-dragons',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
   {
     caption: 'Some of my laptop sticker layouts from the past',
-    src: laptopStickers,
-    thumbnail: laptopStickersThumb,
+    filename: 'laptop-stickers',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
   {
     caption: 'Juggernaut (Warmachine)',
-    src: juggernaut,
-    thumbnail: juggernautThumb,
+    filename: 'juggernaut',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: 'Vladimir (a Pathfinder OC of mine)',
-    src: vlad,
-    thumbnail: vladThumb,
+    filename: 'vlad',
+    isPNG: true,
     thumbnailHeight: 404,
-    thumbnailWidth,
   },
   {
     caption: 'Beast 09 (Warmachine)',
-    src: beast09,
-    thumbnail: beast09Thumb,
+    filename: 'beast-09',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: 'Widowmakers (Warmachine)',
-    src: widowmakers,
-    thumbnail: widowmakersThumb,
+    filename: 'widowmakers',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: 'The Butcher (Warmachine)',
-    src: butcher,
-    thumbnail: butcherThumb,
+    filename: 'butcher',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: 'Mandy (from the movie Mandy)',
-    src: mandy,
-    thumbnail: mandyThumb,
+    filename: 'mandy',
     thumbnailHeight: 200,
-    thumbnailWidth,
   },
   {
     caption: 'Ruin (Warmachine)',
-    src: ruin,
-    thumbnail: ruinThumb,
+    filename: 'ruin',
     thumbnailHeight: 169,
-    thumbnailWidth,
   },
   {
     caption: 'Alexia and Valachev (Warmachine)',
-    src: alexiaValachev,
-    thumbnail: alexiaValachevThumb,
+    filename: 'alexia-valachev',
     thumbnailHeight: 225,
-    thumbnailWidth,
   },
 ]);
+
+const images = galleryImages.map(mapGalleryImagesForGrid);
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({
@@ -203,7 +160,7 @@ export const Gallery: SFC<IGalleryProps & RouteComponentProps<any>> = (props) =>
         various computing projects, from custom gaming rigs to autonomous flying vehicles.
       </Typography>
       <Divider className={classes.divider} />
-      <GridGallery images={IMAGES} enableImageSelection={false} />
+      <GridGallery images={images} enableImageSelection={false} />
     </Paper>
   );
 };
