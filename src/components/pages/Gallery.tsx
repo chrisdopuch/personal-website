@@ -39,21 +39,8 @@ import sorschaThumb from '../../thumbnails/sorscha_thumb.jpg';
 import vandanaThumb from '../../thumbnails/vandana_thumb.jpg';
 import vladThumb from '../../thumbnails/vlad_thumb.png';
 import widowmakersThumb from '../../thumbnails/widowmakers_thumb.jpg';
+import { shuffleArray } from '../../utilities';
 import usePageView from '../hooks/usePageView';
-
-function shuffleArray(array: any[]) {
-  let currentIndex = array.length;
-  let temporaryValue = currentIndex;
-  let randomIndex = currentIndex;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
 
 const thumbnailWidth = 300;
 
@@ -69,7 +56,7 @@ const IMAGES = shuffleArray([
     caption: "Derwyd the Druid (Friend's D&D Character, HeroForge)",
     src: derwyd,
     thumbnail: derwydThumb,
-    thumbnailHeight: 169,
+    thumbnailHeight: 225,
     thumbnailWidth,
   },
   {
