@@ -21,7 +21,7 @@ import Gallery from './pages/Gallery';
 import Home from './pages/Home';
 import TitleBar from './TitleBar';
 
-const Projects = () => (
+export const Projects = () => (
   <Typography variant="h2" component="h3">
     Projects
   </Typography>
