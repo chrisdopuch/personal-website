@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core';
 import { shallow } from 'enzyme';
 import React from 'react';
-import { App } from './App';
+import { App, Projects } from './App';
 
 const appTheme = createMuiTheme({
   breakpoints: {
@@ -33,6 +33,12 @@ function getDefaultProps() {
 describe('App', () => {
   it('renders default props', () => {
     const wrapper = shallow(<App {...getDefaultProps()} />);
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('renders Projects', () => {
+    const wrapper = shallow(<Projects />);
 
     expect(wrapper).toMatchSnapshot();
   });

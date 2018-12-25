@@ -3,7 +3,7 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import ListItem, { ListItemProps } from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
@@ -56,7 +56,7 @@ interface IQuickFact {
   primary: string;
   secondary: string;
   tertiary?: string;
-  component?: ComponentClass<any> | string;
+  component?: React.ReactType<ListItemProps>;
   componentProps?: object;
 }
 
