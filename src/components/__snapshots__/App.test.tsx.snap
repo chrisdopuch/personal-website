@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App renders Projects 1`] = `
+<WithStyles(Typography)
+  component="h3"
+  variant="h2"
+>
+  Projects
+</WithStyles(Typography)>
+`;
+
 exports[`App renders default props 1`] = `
 <Fragment>
   <WithStyles(CssBaseline) />
