@@ -16,7 +16,7 @@ exports[`Home should render with default props 1`] = `
   <img
     alt="my-face"
     className="face"
-    src="test-file-stub"
+    src="me.jpg"
   />
   <WithStyles(Typography)
     variant="body1"

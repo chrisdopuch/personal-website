@@ -25,7 +25,7 @@ exports[`About Main Component should render with default props 1`] = `
     className="root"
     elevation={1}
   >
-    <Component
+    <Header
       classes={
         Object {
           "avatar": "avatar",
@@ -62,7 +62,7 @@ exports[`About Main Component should render with default props 1`] = `
           item={true}
           xs={6}
         >
-          <Component
+          <ProfilePicture
             classes={
               Object {
                 "avatar": "avatar",
@@ -82,7 +82,7 @@ exports[`About Main Component should render with default props 1`] = `
           item={true}
           xs={6}
         >
-          <Component
+          <QuickFacts
             classes={
               Object {
                 "avatar": "avatar",
@@ -113,7 +113,7 @@ exports[`About Main Component should render with default props 1`] = `
       xsDown={false}
       xsUp={false}
     >
-      <Component
+      <ProfilePicture
         classes={
           Object {
             "avatar": "avatar",
@@ -128,7 +128,7 @@ exports[`About Main Component should render with default props 1`] = `
         location={Object {}}
         match={Object {}}
       />
-      <Component
+      <QuickFacts
         classes={
           Object {
             "avatar": "avatar",
@@ -155,7 +155,7 @@ exports[`About ProfilePicture should render with default props 1`] = `
   <WithStyles(Avatar)
     alt="Chris Dopuch"
     className="avatar"
-    src="test-file-stub"
+    src="me-singing.jpg"
   />
 </div>
 `;

@@ -33,7 +33,7 @@ exports[`NavDrawer snapshots renders default props 1`] = `
       open={true}
       variant="temporary"
     >
-      <WithStyles(Component)
+      <WithStyles(DrawerContent)
         items={Array []}
       />
     </WithStyles(Drawer)>
@@ -60,7 +60,7 @@ exports[`NavDrawer snapshots renders default props 1`] = `
       open={true}
       variant="permanent"
     >
-      <WithStyles(Component)
+      <WithStyles(DrawerContent)
         items={Array []}
       />
     </WithStyles(Drawer)>
@@ -101,7 +101,7 @@ exports[`NavDrawer snapshots renders with items 1`] = `
       open={true}
       variant="temporary"
     >
-      <WithStyles(Component)
+      <WithStyles(DrawerContent)
         items={
           Array [
             Object {
@@ -145,7 +145,7 @@ exports[`NavDrawer snapshots renders with items 1`] = `
       open={true}
       variant="permanent"
     >
-      <WithStyles(Component)
+      <WithStyles(DrawerContent)
         items={
           Array [
             Object {
