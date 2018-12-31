@@ -5,8 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^3.2.2",
-    "react": "^16.7.0-alpha.2",
-    "react-dom": "^16.7.0-alpha.2",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
     "react-ga": "^2.5.3",
     "react-grid-gallery": "^0.5.3",
     "react-hookstore": "^1.0.8",
