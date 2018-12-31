@@ -1,9 +1,8 @@
-import { createMuiTheme } from '@material-ui/core';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { App, Projects } from './App';
 
-const appTheme = createMuiTheme({
+const appTheme = {
   breakpoints: {
     up: jest.fn(),
   },
@@ -16,7 +15,7 @@ const appTheme = createMuiTheme({
   zIndex: {
     drawer: 1,
   },
-});
+};
 
 function getDefaultProps() {
   return {
