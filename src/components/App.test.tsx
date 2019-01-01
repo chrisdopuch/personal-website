@@ -1,8 +1,9 @@
+import { Theme } from '@material-ui/core';
 import { shallow } from 'enzyme';
 import React from 'react';
 import { App, Projects } from './App';
 
-const appTheme = {
+const appTheme = ({
   breakpoints: {
     up: jest.fn(),
   },
@@ -15,7 +16,7 @@ const appTheme = {
   zIndex: {
     drawer: 1,
   },
-};
+} as unknown) as Theme;
 
 function getDefaultProps() {
   return {
