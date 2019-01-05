@@ -1,14 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders Projects 1`] = `
-<WithStyles(Typography)
-  component="h3"
-  variant="h2"
->
-  Projects
-</WithStyles(Typography)>
-`;
-
 exports[`App renders default props 1`] = `
 <Fragment>
   <WithStyles(CssBaseline) />
@@ -61,13 +52,6 @@ exports[`App renders default props 1`] = `
                 "page": [Function],
                 "to": "/gallery",
               },
-              Object {
-                "Icon": [Function],
-                "isRouteExact": false,
-                "label": "Projects",
-                "page": [Function],
-                "to": "/projects",
-              },
             ]
           }
         />
@@ -94,12 +78,6 @@ exports[`App renders default props 1`] = `
             exact={false}
             key="/gallery"
             path="/gallery"
-          />
-          <Route
-            component={[Function]}
-            exact={false}
-            key="/projects"
-            path="/projects"
           />
         </main>
       </div>

@@ -36,10 +36,4 @@ describe('App', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('renders Projects', () => {
-    const wrapper = shallow(<Projects />);
-
-    expect(wrapper).toMatchSnapshot();
-  });
 });
