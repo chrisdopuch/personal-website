@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/chrisdopuch/personal-website.svg?branch=master)](https://travis-ci.org/chrisdopuch/personal-website?branch=master) [![Coverage Status](https://coveralls.io/repos/github/chrisdopuch/personal-website/badge.svg?branch=master)](https://coveralls.io/github/chrisdopuch/personal-website?branch=master) [![Dev Dependencies](https://david-dm.org/chrisdopuch/personal-website/dev-status.svg?style=flat)](https://david-dm.org/chrisdopuch/personal-website/dev-status.svg?style=flat)
 
+This is the code base for my personal website at [chrisdopu.ch](www.chrisdopu.ch), written in TypeScript with React.
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
