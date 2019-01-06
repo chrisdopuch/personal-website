@@ -15,7 +15,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
-import React, { ComponentClass, ComponentType, Fragment, SFC } from 'react';
+import React, { ComponentType, Fragment, SFC } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import meSinging from '../../images/me-singing.jpg';
 import usePageView from '../hooks/usePageView';
@@ -32,15 +32,15 @@ const stylesDeclarations = (theme: Theme) =>
       justifyContent: 'center',
     },
     divider: {
-      marginBottom: '10px',
-      marginTop: '10px',
+      marginBottom: 25,
+      marginTop: 25,
     },
     gridContainer: {
-      marginTop: '10px',
+      marginTop: 10,
     },
     list: {
       backgroundColor: theme.palette.background.paper,
-      marginTop: '10px',
+      marginTop: 10,
     },
     root: {
       paddingBottom: theme.spacing.unit * 2,

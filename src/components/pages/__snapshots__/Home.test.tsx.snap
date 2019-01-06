@@ -13,31 +13,175 @@ exports[`Home should render with default props 1`] = `
   <WithStyles(Divider)
     className="divider"
   />
+  <WithStyles(Typography)
+    variant="h4"
+  >
+    Now entering the Chris Dopuch Zone
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    variant="subtitle1"
+  >
+    <i>
+      Where I wrote enough React code to make my head spin
+    </i>
+  </WithStyles(Typography)>
   <img
     alt="my-face"
     className="face"
     src="me.jpg"
   />
-  <WithStyles(Typography)
-    variant="body1"
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
   >
-    I wrote enough React to make my head spin!
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    variant="body1"
-  >
-    More content to come soon...
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    variant="body1"
-  >
-    <a
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
     >
-      Learn React
-    </a>
-  </WithStyles(Typography)>
+      <WithStyles(Card)>
+        <WithStyles(CardActionArea)
+          component={[Function]}
+        >
+          <WithStyles(CardMedia)
+            image="me-in-woods_thumb.jpg"
+            title="About me"
+          />
+          <WithStyles(CardContent)>
+            <WithStyles(Typography)
+              component="h2"
+              gutterBottom={true}
+              variant="h5"
+            >
+              Learn About Me
+            </WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="p"
+            >
+              Learn more about me, Chris Dopuch! Find out about my background and education, my areas of expertise, my current career and passions, and more
+            </WithStyles(Typography)>
+          </WithStyles(CardContent)>
+        </WithStyles(CardActionArea)>
+        <WithStyles(CardActions)>
+          <WithStyles(Button)
+            color="primary"
+            component={[Function]}
+            size="small"
+          >
+            Learn More
+          </WithStyles(Button)>
+        </WithStyles(CardActions)>
+      </WithStyles(Card)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <WithStyles(Card)>
+        <WithStyles(CardActionArea)
+          component={[Function]}
+        >
+          <WithStyles(CardMedia)
+            image="ruin_thumb.jpg"
+            title="Image Gallery"
+          />
+          <WithStyles(CardContent)>
+            <WithStyles(Typography)
+              component="h2"
+              gutterBottom={true}
+              variant="h5"
+            >
+              Browse Image Gallery
+            </WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="p"
+            >
+              Browse my gallery of images, showcasing various projects of mine from painting to programming, as well as shots of me and my life
+            </WithStyles(Typography)>
+          </WithStyles(CardContent)>
+        </WithStyles(CardActionArea)>
+        <WithStyles(CardActions)>
+          <WithStyles(Button)
+            color="primary"
+            component={[Function]}
+            size="small"
+          >
+            Browse images
+          </WithStyles(Button)>
+        </WithStyles(CardActions)>
+      </WithStyles(Card)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={true}
+    >
+      <WithStyles(Card)>
+        <WithStyles(CardActionArea)
+          component="a"
+          href="https://www.github.com/chrisdopuch"
+          target="_blank"
+        >
+          <WithStyles(CardMedia)
+            image="gitmoar_thumb.jpg"
+            title="Social Media"
+          />
+          <WithStyles(CardContent)>
+            <WithStyles(Typography)
+              component="h2"
+              gutterBottom={true}
+              variant="h5"
+            >
+              Connect With Me
+            </WithStyles(Typography)>
+            <WithStyles(Typography)
+              component="p"
+            >
+              Interested in getting to know me? You can find me on a variety of social media platforms both personal and professional - come by and say hello!
+            </WithStyles(Typography)>
+          </WithStyles(CardContent)>
+        </WithStyles(CardActionArea)>
+        <WithStyles(CardActions)>
+          <WithStyles(Button)
+            color="primary"
+            component="a"
+            href="https://www.linkedin.com/in/chris-dopuch-99579383/"
+            size="small"
+            target="blank"
+          >
+            LinkedIn
+          </WithStyles(Button)>
+          <WithStyles(Button)
+            color="primary"
+            component="a"
+            href="https://www.github.com/chrisdopuch"
+            size="small"
+            target="blank"
+          >
+            Github
+          </WithStyles(Button)>
+          <WithStyles(Button)
+            color="primary"
+            component="a"
+            href="https://www.twitter.com/ChrisDopuch"
+            size="small"
+            target="blank"
+          >
+            Twitter
+          </WithStyles(Button)>
+          <WithStyles(Button)
+            color="primary"
+            component="a"
+            href="https://facebook.com/chris.dopuch"
+            size="small"
+            target="blank"
+          >
+            Facebook
+          </WithStyles(Button)>
+        </WithStyles(CardActions)>
+      </WithStyles(Card)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(Paper)>
 `;
