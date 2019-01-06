@@ -44,6 +44,66 @@ const galleryImages: IGalleryImage[] = shuffleArray([
     thumbnailHeight: 225,
   },
   {
+    caption: 'Me busting out some Lady Gaga Karaoke',
+    filename: 'me-singing',
+    thumbnailHeight: 300,
+  },
+  {
+    caption: 'Me wearing armor in the SCA',
+    filename: 'me-at-lillies',
+    thumbnailHeight: 400,
+  },
+  {
+    caption: 'Warhammer 40,000 Trench Diorama (front)',
+    filename: 'trench-diorama-front',
+    thumbnailHeight: 225,
+  },
+  {
+    caption: 'Warhammer 40,000 Trench Diorama (side)',
+    filename: 'trench-diorama-side',
+    thumbnailHeight: 225,
+  },
+  {
+    caption: 'Gitmoar, a data visualization hackathon project',
+    filename: 'gitmoar',
+    thumbnailHeight: 169,
+  },
+  {
+    caption: 'Me hiking in Washington Park, Portland OR',
+    filename: 'me-in-woods',
+    thumbnailHeight: 169,
+  },
+  {
+    caption: "At Steak 'n Shake, the greatest restaurant of all",
+    filename: 'me-at-steak-n-shake',
+    thumbnailHeight: 400,
+  },
+  {
+    caption: 'Me when I worked at AppNexus',
+    filename: 'me-at-appnexus',
+    thumbnailHeight: 219,
+  },
+  {
+    caption: 'Black Templars Marshal (Warhammer 40k)',
+    filename: 'marshal',
+    thumbnailHeight: 334,
+  },
+  {
+    caption: 'Black Templars Landraider (Warhammer 40k)',
+    filename: 'landraider',
+    thumbnailHeight: 225,
+  },
+  {
+    caption: 'Black Templars Dreadnought (Warhammer 40k)',
+    filename: 'dreadnought',
+    thumbnailHeight: 225,
+  },
+  {
+    caption: 'Cesnica, a Traditional Serbian Christmas bread I baked',
+    filename: 'cesnica',
+    thumbnailHeight: 169,
+  },
+  {
     caption: 'My custom-built gaming PC',
     filename: 'gaming-rig',
     thumbnailHeight: 225,
