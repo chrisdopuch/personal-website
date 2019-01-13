@@ -7,7 +7,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:watch": "yarn test -- --watch",
     "eject": "react-scripts eject",
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
