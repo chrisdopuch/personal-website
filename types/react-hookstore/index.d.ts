@@ -2,10 +2,4 @@
 // Definitions by: Chris Dopuch <chris.dopuch@gmail.com>
 
 export function useStore(storeName?: string): [any, (newStore: any) => void];
-export function createStore(config: StoreConfig): number;
-
-export interface StoreConfig {
-  name?: string;
-  state?: any;
-  reducer?: (previousState: any, action: { type: string; payload: any }) => any;
-}
+export function createStore(name: string, state: any, reducer?: (state: any, value: any) => any): number;

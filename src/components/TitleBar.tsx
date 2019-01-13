@@ -28,7 +28,7 @@ interface ITitleBarProps extends WithStyles<typeof stylesDeclarations, true> {
 
 export const TitleBar: SFC<ITitleBarProps> = (props) => {
   const { classes, title } = props;
-  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useStore();
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useStore('appStore');
 
   return (
     <AppBar position="fixed" className={classes.appBar}>

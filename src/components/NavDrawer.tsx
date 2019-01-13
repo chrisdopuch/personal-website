@@ -32,7 +32,7 @@ export interface INavDrawerProps extends WithStyles<typeof stylesDeclarations, t
 
 export const NavDrawer: SFC<INavDrawerProps> = (props) => {
   const { classes, theme, items } = props;
-  const [isMobileDrawerOpen, setisMobileDrawerOpen] = useStore();
+  const [isMobileDrawerOpen, setisMobileDrawerOpen] = useStore('appStore');
 
   return (
     <nav className={classes.drawer}>

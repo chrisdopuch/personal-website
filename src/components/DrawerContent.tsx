@@ -33,7 +33,7 @@ interface IDrawerContentProps extends WithStyles<typeof stylesDeclarations> {
 
 export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
   const { classes, items } = props;
-  const setisMobileDrawerOpen = useStore()[1];
+  const setisMobileDrawerOpen = useStore('appStore')[1];
 
   return (
     <div>
