@@ -11,7 +11,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 GoogleAnalytics.initialize('UA-128558512-1', { testMode: !isProduction });
 
 // initialize the global hook store
-createStore({ state: false });
+createStore('appStore', false);
 
 ReactDOM.render(<App title={`${!isProduction ? 'Dev: ' : ''}The Chris Dopuch Zone`} />, document.getElementById(
   'root'
