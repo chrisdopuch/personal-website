@@ -49,6 +49,13 @@ export const appTheme = createMuiTheme({
 });
 
 export const darkTheme = createMuiTheme({
+  overrides: {
+    MuiButton: {
+      label: {
+        color: 'white',
+      },
+    },
+  },
   palette: {
     primary: {
       main: '#212121',
