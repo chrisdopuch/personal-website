@@ -7,7 +7,6 @@ export const appTheme = createMuiTheme({
 });
 
 export const darkTheme = createMuiTheme({
-  ...appTheme,
   overrides: {
     MuiButton: {
       label: {
@@ -23,5 +22,8 @@ export const darkTheme = createMuiTheme({
       main: '#004d40',
     },
     type: 'dark',
+  },
+  typography: {
+    useNextVariants: true,
   },
 });
