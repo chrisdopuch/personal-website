@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { SFC } from 'react';
 import { useStore } from 'react-hookstore';
-import { appTheme } from './App';
+import { IAppStore } from '../store';
 
 const stylesDeclarations = (theme: Theme) => {
   return createStyles({
@@ -28,7 +28,7 @@ interface ITitleBarProps extends WithStyles<typeof stylesDeclarations, true> {
 
 export const TitleBar: SFC<ITitleBarProps> = (props) => {
   const { classes, title } = props;
-  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useStore('appStore');
+  const [appStore, setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
@@ -36,7 +36,13 @@ export const TitleBar: SFC<ITitleBarProps> = (props) => {
         <IconButton
           color="inherit"
           aria-label="Open drawer"
-          onClick={() => setIsMobileDrawerOpen(!isMobileDrawerOpen)} // tslint:disable-line
+          onClick={() =>
+            setStore(
+              Object.assign({}, appStore, {
+                isNavDrawerOpen: !appStore.isNavDrawerOpen,
+              })
+            )
+          }
           className={classes.menuButton}
         >
           <MenuIcon />
@@ -47,10 +53,6 @@ export const TitleBar: SFC<ITitleBarProps> = (props) => {
       </Toolbar>
     </AppBar>
   );
-};
-
-TitleBar.defaultProps = {
-  theme: appTheme,
 };
 
 export default withStyles(stylesDeclarations, { withTheme: true })(TitleBar);

@@ -17,8 +17,8 @@ import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import React, { ComponentType, Fragment, SFC } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import usePageView from '../../hooks/usePageView';
 import meSinging from '../../images/me-singing.jpg';
-import usePageView from '../hooks/usePageView';
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({

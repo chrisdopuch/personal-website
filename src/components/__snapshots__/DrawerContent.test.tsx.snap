@@ -8,6 +8,16 @@ exports[`DrawerContent snapshots renders default props 1`] = `
   <WithStyles(Divider) />
   <WithStyles(List) />
   <WithStyles(Divider) />
+  <WithStyles(ListItem)>
+    <WithStyles(Switch)
+      color="primary"
+      onChange={[Function]}
+    />
+    <WithStyles(ListItemText)
+      primary="Dark Mode"
+    />
+  </WithStyles(ListItem)>
+  <WithStyles(Divider) />
   <div
     className="social"
   >
@@ -67,6 +77,16 @@ exports[`DrawerContent snapshots renders with items 1`] = `
       />
     </WithStyles(ListItem)>
   </WithStyles(List)>
+  <WithStyles(Divider) />
+  <WithStyles(ListItem)>
+    <WithStyles(Switch)
+      color="primary"
+      onChange={[Function]}
+    />
+    <WithStyles(ListItemText)
+      primary="Dark Mode"
+    />
+  </WithStyles(ListItem)>
   <WithStyles(Divider) />
   <div
     className="social"

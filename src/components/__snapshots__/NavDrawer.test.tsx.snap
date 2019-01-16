@@ -30,7 +30,6 @@ exports[`NavDrawer snapshots renders default props 1`] = `
         }
       }
       onClose={[Function]}
-      open={true}
       variant="temporary"
     >
       <WithStyles(DrawerContent)
@@ -98,7 +97,6 @@ exports[`NavDrawer snapshots renders with items 1`] = `
         }
       }
       onClose={[Function]}
-      open={true}
       variant="temporary"
     >
       <WithStyles(DrawerContent)

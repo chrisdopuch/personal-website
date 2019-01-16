@@ -5,8 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import React, { SFC } from 'react';
 import GridGallery from 'react-grid-gallery';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
+import usePageView from '../../hooks/usePageView';
 import { shuffleArray } from '../../utilities';
-import usePageView from '../hooks/usePageView';
 
 const thumbnailWidth = 300;
 

@@ -2,11 +2,11 @@ import { shallow } from 'enzyme';
 import { History, Location } from 'history';
 import React from 'react';
 import { match } from 'react-router';
+import usePageView from '../../hooks/usePageView';
 import { shuffleArray } from '../../utilities';
-import usePageView from '../hooks/usePageView';
 import { Gallery } from './Gallery';
 
-jest.mock('../hooks/usePageView', () => {
+jest.mock('../../hooks/usePageView', () => {
   return jest.fn();
 });
 
