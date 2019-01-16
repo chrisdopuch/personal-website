@@ -4,6 +4,7 @@ import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/s
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import React, { ComponentType, SFC } from 'react';
 import { useStore } from 'react-hookstore';
+import { IAppStore } from '..';
 import DrawerContent from './DrawerContent';
 
 const drawerWidth = 240;
@@ -32,7 +33,7 @@ export interface INavDrawerProps extends WithStyles<typeof stylesDeclarations, t
 
 export const NavDrawer: SFC<INavDrawerProps> = (props) => {
   const { classes, theme, items } = props;
-  const [isMobileDrawerOpen, setisMobileDrawerOpen] = useStore('appStore');
+  const [appStore, setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
 
   return (
     <nav className={classes.drawer}>
@@ -41,8 +42,8 @@ export const NavDrawer: SFC<INavDrawerProps> = (props) => {
         <Drawer
           variant="temporary"
           anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-          open={isMobileDrawerOpen}
-          onClose={() => setisMobileDrawerOpen(false)} // tslint:disable-line
+          open={appStore.isNavDrawerOpen}
+          onClose={() => setStore(Object.assign({}, appStore, { isNavDrawerOpen: false }))}
           classes={{
             paper: classes.drawerPaper,
           }}

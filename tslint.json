@@ -8,6 +8,7 @@
     ]
   },
   "rules": {
+    "jsx-no-lambda": false,
     "trailing-comma": [
       true,
       {

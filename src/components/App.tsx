@@ -11,8 +11,10 @@ import CameraIcon from '@material-ui/icons/Camera';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import React from 'react';
+import { useStore } from 'react-hookstore';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import { IAppStore } from '..';
 import NavDrawer from './NavDrawer';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
@@ -46,34 +48,43 @@ export const appTheme = createMuiTheme({
   },
 });
 
+export const darkTheme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#212121',
+    },
+    secondary: {
+      main: '#004d40',
+    },
+    type: 'dark',
+  },
+});
+
 interface IAppProps extends WithStyles<typeof stylesDeclarations, true> {
   title: string;
 }
 
-export class App extends React.Component<IAppProps> {
-  public render() {
-    const { classes, title, theme } = this.props;
+export const App: React.SFC<IAppProps> = (props) => {
+  const { classes, title } = props;
+  const [appStore, _setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
 
-    return (
-      <React.Fragment>
-        <CssBaseline />
-        <MuiThemeProvider theme={theme}>
-          <Router>
-            <div className={classes.root}>
-              <TitleBar title={title} />
-              <NavDrawer items={navBarItems} />
-              <main className={classes.content}>
-                <div className={classes.toolbar} />
-                {navBarItems.map(({ to, page, isRouteExact }) => {
-                  return <Route path={to} component={page} exact={isRouteExact} key={to} />;
-                })}
-              </main>
-            </div>
-          </Router>
-        </MuiThemeProvider>
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <MuiThemeProvider theme={Object.assign({}, appTheme, appStore.isDarkMode ? darkTheme : {})}>
+      <CssBaseline />
+      <Router>
+        <div className={classes.root}>
+          <TitleBar title={title} />
+          <NavDrawer items={navBarItems} />
+          <main className={classes.content}>
+            <div className={classes.toolbar} />
+            {navBarItems.map(({ to, page, isRouteExact }) => {
+              return <Route path={to} component={page} exact={isRouteExact} key={to} />;
+            })}
+          </main>
+        </div>
+      </Router>
+    </MuiThemeProvider>
+  );
+};
 
 export default withStyles(stylesDeclarations, { withTheme: true })(App);

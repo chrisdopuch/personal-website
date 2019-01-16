@@ -1,3 +1,4 @@
+import { Switch, Typography } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -9,9 +10,16 @@ import React, { ComponentType, SFC } from 'react';
 import { useStore } from 'react-hookstore';
 import { Link } from 'react-router-dom';
 import { Follow } from 'react-twitter-widgets';
+import { IAppStore } from '..';
 
 const stylesDeclarations = (theme: Theme) => {
   return createStyles({
+    darkMode: {
+      paddingLeft: 0,
+    },
+    listItemIcon: {
+      marginRight: 6,
+    },
     social: {
       margin: '20px 10px',
       textAlign: 'left',
@@ -33,7 +41,7 @@ interface IDrawerContentProps extends WithStyles<typeof stylesDeclarations> {
 
 export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
   const { classes, items } = props;
-  const setisMobileDrawerOpen = useStore('appStore')[1];
+  const [appStore, setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
 
   return (
     <div>
@@ -44,20 +52,29 @@ export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
           const linkProps = { to } as any;
           return (
             <ListItem
-              onClick={() => setisMobileDrawerOpen(false)} // tslint:disable-line
+              onClick={() => setStore(Object.assign({}, appStore, { isNavDrawerOpen: false }))}
               button={true}
               key={label}
               component={Link}
               {...linkProps}
             >
               <ListItemIcon>
-                <Icon />
+                <Icon className={classes.listItemIcon} />
               </ListItemIcon>
               <ListItemText primary={label} />
             </ListItem>
           );
         })}
       </List>
+      <Divider />
+      <ListItem className={classes.darkMode}>
+        <Switch
+          checked={appStore.isDarkMode}
+          onChange={(e) => setStore(Object.assign({}, appStore, { isDarkMode: e.target.checked }))}
+          color="primary"
+        />
+        <ListItemText primary="Dark Mode" />
+      </ListItem>
       <Divider />
       <div className={classes.social}>
         <div className={classes.twitter}>
