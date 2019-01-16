@@ -7,7 +7,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import React, { SFC } from 'react';
 import { useStore } from 'react-hookstore';
 import { IAppStore } from '../store';
-import { appTheme } from './App';
 
 const stylesDeclarations = (theme: Theme) => {
   return createStyles({
@@ -54,10 +53,6 @@ export const TitleBar: SFC<ITitleBarProps> = (props) => {
       </Toolbar>
     </AppBar>
   );
-};
-
-TitleBar.defaultProps = {
-  theme: appTheme,
 };
 
 export default withStyles(stylesDeclarations, { withTheme: true })(TitleBar);
