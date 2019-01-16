@@ -1,22 +1,9 @@
-import { Theme } from '@material-ui/core';
 import { shallow } from 'enzyme';
 import React from 'react';
-import { App, Projects } from './App';
+import { App } from './App';
 
-const appTheme = ({
-  breakpoints: {
-    up: jest.fn(),
-  },
-  spacing: {
-    unit: 1,
-  },
-  typography: {
-    useNextVariants: true,
-  },
-  zIndex: {
-    drawer: 1,
-  },
-} as unknown) as Theme;
+jest.mock('react-hookstore', () => ({ useStore: jest.fn(() => [{ isDarkMode: false }]) }));
+jest.mock('../themes', () => ({ darkTheme: {}, appTheme: {} }));
 
 function getDefaultProps() {
   return {
@@ -25,7 +12,6 @@ function getDefaultProps() {
       root: 'root',
       toolbar: 'toolbar',
     },
-    theme: appTheme,
     title: 'test',
   };
 }

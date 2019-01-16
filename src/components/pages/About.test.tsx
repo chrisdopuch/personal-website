@@ -2,10 +2,10 @@ import { shallow } from 'enzyme';
 import { History, Location } from 'history';
 import React from 'react';
 import { match } from 'react-router';
-import withPageView from '../hooks/usePageView';
+import withPageView from '../../hooks/usePageView';
 import { About, Header, ProfilePicture, QuickFacts } from './About';
 
-jest.mock('../hooks/usePageView', () => {
+jest.mock('../../hooks/usePageView', () => {
   return jest.fn();
 });
 

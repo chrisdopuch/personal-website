@@ -1,4 +1,4 @@
-import { Switch, Typography } from '@material-ui/core';
+import { Switch } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -10,7 +10,7 @@ import React, { ComponentType, SFC } from 'react';
 import { useStore } from 'react-hookstore';
 import { Link } from 'react-router-dom';
 import { Follow } from 'react-twitter-widgets';
-import { IAppStore } from '..';
+import { IAppStore, isDarkModeKey } from '../store';
 
 const stylesDeclarations = (theme: Theme) => {
   return createStyles({
@@ -70,7 +70,11 @@ export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
       <ListItem className={classes.darkMode}>
         <Switch
           checked={appStore.isDarkMode}
-          onChange={(e) => setStore(Object.assign({}, appStore, { isDarkMode: e.target.checked }))}
+          onChange={(e) => {
+            const isDarkMode = e.target.checked;
+            localStorage.setItem(isDarkModeKey, isDarkMode.toString());
+            return setStore(Object.assign({}, appStore, { isDarkMode }));
+          }}
           color="primary"
         />
         <ListItemText primary="Dark Mode" />

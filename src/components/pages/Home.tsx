@@ -11,11 +11,11 @@ import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/s
 import Typography from '@material-ui/core/Typography';
 import React, { SFC } from 'react';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
+import usePageView from '../../hooks/usePageView';
 import me from '../../images/me.jpg';
 import gitmoar from '../../thumbnails/gitmoar_thumb.jpg';
 import meInWoods from '../../thumbnails/me-in-woods_thumb.jpg';
 import diorama from '../../thumbnails/ruin_thumb.jpg';
-import usePageView from '../hooks/usePageView';
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({

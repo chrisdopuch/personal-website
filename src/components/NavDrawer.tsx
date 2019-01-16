@@ -4,7 +4,7 @@ import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/s
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import React, { ComponentType, SFC } from 'react';
 import { useStore } from 'react-hookstore';
-import { IAppStore } from '..';
+import { IAppStore } from '../store';
 import DrawerContent from './DrawerContent';
 
 const drawerWidth = 240;
@@ -37,7 +37,6 @@ export const NavDrawer: SFC<INavDrawerProps> = (props) => {
 
   return (
     <nav className={classes.drawer}>
-      {/* The implementation can be swap with js to avoid SEO duplication of links. */}
       <Hidden mdUp={true} implementation="css">
         <Drawer
           variant="temporary"
@@ -48,7 +47,7 @@ export const NavDrawer: SFC<INavDrawerProps> = (props) => {
             paper: classes.drawerPaper,
           }}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
         >
           <DrawerContent items={items} />

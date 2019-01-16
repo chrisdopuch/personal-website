@@ -1,20 +1,13 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
-import {
-  createMuiTheme,
-  createStyles,
-  MuiThemeProvider,
-  Theme,
-  WithStyles,
-  withStyles,
-} from '@material-ui/core/styles';
+import { createStyles, MuiThemeProvider, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
 import CameraIcon from '@material-ui/icons/Camera';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import React from 'react';
 import { useStore } from 'react-hookstore';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Route } from 'react-router-dom';
-import { IAppStore } from '..';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { IAppStore } from '../store';
+import { appTheme, darkTheme } from '../themes';
 import NavDrawer from './NavDrawer';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
@@ -42,31 +35,6 @@ const stylesDeclarations = (theme: Theme) => {
   });
 };
 
-export const appTheme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-  },
-});
-
-export const darkTheme = createMuiTheme({
-  overrides: {
-    MuiButton: {
-      label: {
-        color: 'white',
-      },
-    },
-  },
-  palette: {
-    primary: {
-      main: '#212121',
-    },
-    secondary: {
-      main: '#004d40',
-    },
-    type: 'dark',
-  },
-});
-
 interface IAppProps extends WithStyles<typeof stylesDeclarations, true> {
   title: string;
 }
@@ -76,7 +44,7 @@ export const App: React.SFC<IAppProps> = (props) => {
   const [appStore, _setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
 
   return (
-    <MuiThemeProvider theme={Object.assign({}, appTheme, appStore.isDarkMode ? darkTheme : {})}>
+    <MuiThemeProvider theme={appStore.isDarkMode ? darkTheme : appTheme}>
       <CssBaseline />
       <Router>
         <div className={classes.root}>
