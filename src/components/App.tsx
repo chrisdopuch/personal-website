@@ -1,3 +1,4 @@
+import CircularProgress from '@material-ui/core/CircularProgress';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { createStyles, MuiThemeProvider, Theme, WithStyles, withStyles } from '@material-ui/core/styles';
 import CameraIcon from '@material-ui/icons/Camera';
@@ -5,14 +6,29 @@ import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import React from 'react';
 import { useStore } from 'react-hookstore';
+import Loadable from 'react-loadable';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { IAppStore } from '../store';
 import { appTheme, darkTheme } from '../themes';
 import NavDrawer from './NavDrawer';
-import About from './pages/About';
-import Gallery from './pages/Gallery';
-import Home from './pages/Home';
 import TitleBar from './TitleBar';
+
+const loading = () => {
+  return <CircularProgress />;
+};
+
+const About = Loadable({
+  loader: () => import('./pages/About'),
+  loading,
+});
+const Gallery = Loadable({
+  loader: () => import('./pages/Gallery'),
+  loading,
+});
+const Home = Loadable({
+  loader: () => import('./pages/Home'),
+  loading,
+});
 
 const navBarItems = [
   { to: '/', label: 'Home', Icon: HomeIcon, isRouteExact: true, page: Home },
