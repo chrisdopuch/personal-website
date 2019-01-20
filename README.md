@@ -4,7 +4,7 @@
 
 This is the code base for my personal website at [chrisdopu.ch](www.chrisdopu.ch), written in TypeScript with React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and built with [Material-UI](https://material-ui.com/) and other React libraries.
 
 ## Available Scripts
 
@@ -66,6 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ma
 This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
 ### Deployment
+
+This application is deployed to a Heroku dyno with the [create-react-app buildpack](https://github.com/mars/create-react-app-buildpack).
+
+The `master` branch should always be kept in a deployable state. Any updates to `master` are automatically deployed to the dyno (only if the CI build passes first).
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
