@@ -19,6 +19,7 @@
     "@types/react-loadable": "^5.5.0",
     "lodash": "^4.17.11",
     "material-ui": "^0.20.2",
+    "newrelic": "^5.1.0",
     "prop-types": "^15.6.0",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2",
