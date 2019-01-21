@@ -6,6 +6,10 @@ This is the code base for my personal website at [chrisdopu.ch](www.chrisdopu.ch
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and built with [Material-UI](https://material-ui.com/) and other React libraries.
 
+## Dependencies
+
+Run `yarn` to install the dependencies. Additionally, image compression is done using [simple-guetzli](https://github.com/romainmenke/simple-guetzli) which also depends on [guetzli](https://github.com/google/guetzli).
+
 ## Available Scripts
 
 In the project directory, you can run:

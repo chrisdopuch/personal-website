@@ -185,8 +185,8 @@ exports[`Gallery should render with default props 1`] = `
         },
         Object {
           "caption": "Vladimir (a Pathfinder OC of mine)",
-          "src": "vlad.png",
-          "thumbnail": "vlad_thumb.png",
+          "src": "vlad.jpg",
+          "thumbnail": "vlad_thumb.jpg",
           "thumbnailHeight": 404,
           "thumbnailWidth": 300,
         },
