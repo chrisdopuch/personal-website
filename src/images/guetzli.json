@@ -1,0 +1,219 @@
+{
+  "src/images/alexia-valachev.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.8867576-08:00",
+    "path": "src/images/alexia-valachev.jpg",
+    "checksumSHA1": "95f405c9f0987e487aede45fc9f01235b1943030",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/beast-09.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.8987258-08:00",
+    "path": "src/images/beast-09.jpg",
+    "checksumSHA1": "14c42e60461c6d48ff9b2b4947df5b25ca051356",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/black-dragons.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9116913-08:00",
+    "path": "src/images/black-dragons.jpg",
+    "checksumSHA1": "2d690cee0d6cf3afde21eed41632dec6d3fa2e90",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/black-templars-army.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-21T08:09:56.8726077-08:00",
+    "path": "src/images/black-templars-army.jpg",
+    "checksumSHA1": "51a2a317d5e674b55e73d489ef6af4fc3d9db73e",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/butcher.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9256537-08:00",
+    "path": "src/images/butcher.jpg",
+    "checksumSHA1": "390102bc64bfff403fdf5f989e0677c658a9c739",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/capstone-project.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9565709-08:00",
+    "path": "src/images/capstone-project.jpg",
+    "checksumSHA1": "b8b8b9c9415594923ad31009612f1eeaf8b024f4",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/cesnica.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.959563-08:00",
+    "path": "src/images/cesnica.jpg",
+    "checksumSHA1": "638d0ecb14f324a7a7dc8e94559d591534ddfd74",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/derwyd.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9675416-08:00",
+    "path": "src/images/derwyd.jpg",
+    "checksumSHA1": "0b6c554145b4d631872a24c514199838c8f5be1a",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/dreadnought.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9705337-08:00",
+    "path": "src/images/dreadnought.jpg",
+    "checksumSHA1": "ba04cdb2ad46be7a9ab90f7c78528a8ed8a4399c",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/ekmuss.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9755203-08:00",
+    "path": "src/images/ekmuss.jpg",
+    "checksumSHA1": "56c14b22978815a57e346e03a0af63024a2d2a2d",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/gaming-rig.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9844961-08:00",
+    "path": "src/images/gaming-rig.jpg",
+    "checksumSHA1": "0899f9e8ccb40aacb25a9976438594446b081960",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/gitmoar.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:11.9974617-08:00",
+    "path": "src/images/gitmoar.jpg",
+    "checksumSHA1": "750cac1bbff1c7d9ce42a9cbf422102076a1c7a5",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/gnoll.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0044429-08:00",
+    "path": "src/images/gnoll.jpg",
+    "checksumSHA1": "00fa53ef29c2f591d01981795fd24222b95036c4",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/juggernaut.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0144164-08:00",
+    "path": "src/images/juggernaut.jpg",
+    "checksumSHA1": "3db7fbce43e4c5ae47e37dd33934ff08f09e15e7",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/landraider.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0164107-08:00",
+    "path": "src/images/landraider.jpg",
+    "checksumSHA1": "48e7c7900ced901e1728e7b8c0e22a05552aedad",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/laptop-stickers.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0243894-08:00",
+    "path": "src/images/laptop-stickers.jpg",
+    "checksumSHA1": "c47f2ae5eedb7c6b59a0e84af1003fd5bd4fd048",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/mandy.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0303737-08:00",
+    "path": "src/images/mandy.jpg",
+    "checksumSHA1": "db934aa16f250d6c7a017993612035ea0d597849",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/marshal.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0333655-08:00",
+    "path": "src/images/marshal.jpg",
+    "checksumSHA1": "d57ea3f793a4ecea55ce5054766ebcc266a21bfb",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/me-at-appnexus.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0373547-08:00",
+    "path": "src/images/me-at-appnexus.jpg",
+    "checksumSHA1": "166451b2a71583d0af535c8a009e8f32b5d17334",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/me-at-lillies.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0393495-08:00",
+    "path": "src/images/me-at-lillies.jpg",
+    "checksumSHA1": "d829f5dbc695fd4f1e086eb52bd55322a5c48969",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/me-at-steak-n-shake.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0423416-08:00",
+    "path": "src/images/me-at-steak-n-shake.jpg",
+    "checksumSHA1": "9cadca51c40ee9996f90cd8d2af58fcfdfccf89e",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/me-in-woods.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0573015-08:00",
+    "path": "src/images/me-in-woods.jpg",
+    "checksumSHA1": "4b492962ab9513c5dc25f5e583807988a602c758",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/me-singing.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0602935-08:00",
+    "path": "src/images/me-singing.jpg",
+    "checksumSHA1": "654d44cc2f0495d368bbeb8290922aaee23c346f",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/me.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0642827-08:00",
+    "path": "src/images/me.jpg",
+    "checksumSHA1": "9d5a6f23dc324fc9a037e6dcb29303e2b8cabe34",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/ruin.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.0732588-08:00",
+    "path": "src/images/ruin.jpg",
+    "checksumSHA1": "2fb8ab9abcad129057fa5e5d545741a563b60005",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/sorscha.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.1111574-08:00",
+    "path": "src/images/sorscha.jpg",
+    "checksumSHA1": "c2fcb4cb6392ac330cb78a23af0798653ae13415",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/trench-diorama-front.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.1141495-08:00",
+    "path": "src/images/trench-diorama-front.jpg",
+    "checksumSHA1": "feb150cf6f8d98cfee9374fd12a3cb6e851a2e5a",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/trench-diorama-side.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.1161441-08:00",
+    "path": "src/images/trench-diorama-side.jpg",
+    "checksumSHA1": "8d37d946ecee5e53ef7e33b93b71fa929ffe879a",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/vandana.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.1301068-08:00",
+    "path": "src/images/vandana.jpg",
+    "checksumSHA1": "966588f1aeec65ce8724e0345f8fe216435aa42b",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/vlad.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-21T08:09:56.8765971-08:00",
+    "path": "src/images/vlad.jpg",
+    "checksumSHA1": "be2b640c5af0a8b21db3658167791e443c471959",
+    "guetzli-version": "1.0.1"
+  },
+  "src/images/widowmakers.jpg": {
+    "quality": 95,
+    "revisionTime": "2019-01-20T22:22:12.1739893-08:00",
+    "path": "src/images/widowmakers.jpg",
+    "checksumSHA1": "dda5f338f13264cdfbf70c2c8f12840b93b26994",
+    "guetzli-version": "1.0.1"
+  }
+}
