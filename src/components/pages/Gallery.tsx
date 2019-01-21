@@ -146,7 +146,6 @@ const galleryImages: IGalleryImage[] = shuffleArray([
   {
     caption: 'Vladimir (a Pathfinder OC of mine)',
     filename: 'vlad',
-    isPNG: true,
     thumbnailHeight: 404,
   },
   {
