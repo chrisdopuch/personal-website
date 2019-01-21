@@ -12,7 +12,7 @@
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
     "coveralls": "yarn test -- --coverage && cat ./coverage/lcov.info | coveralls",
-    "thumbnails": "thumb --ignore --overwrite --width 300 src/images src/thumbnails"
+    "thumbnails": "thumb --ignore --overwrite --skip --width 300 src/images src/thumbnails"
   },
   "dependencies": {
     "@material-ui/core": "^3.2.2",
