@@ -1,6 +1,75 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders default props 1`] = `
+exports[`App renders when \`isDarkMode\` is true 1`] = `
+<MuiThemeProviderOld
+  theme={Object {}}
+>
+  <WithStyles(CssBaseline) />
+  <BrowserRouter>
+    <div
+      className="root"
+    >
+      <WithStyles(TitleBar)
+        title="test"
+      />
+      <WithStyles(NavDrawer)
+        items={
+          Array [
+            Object {
+              "Icon": [Function],
+              "isRouteExact": true,
+              "label": "Home",
+              "page": [Function],
+              "to": "/",
+            },
+            Object {
+              "Icon": [Function],
+              "isRouteExact": false,
+              "label": "About me",
+              "page": [Function],
+              "to": "/about",
+            },
+            Object {
+              "Icon": [Function],
+              "isRouteExact": false,
+              "label": "Gallery",
+              "page": [Function],
+              "to": "/gallery",
+            },
+          ]
+        }
+      />
+      <main
+        className="content"
+      >
+        <div
+          className="toolbar"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="/"
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          exact={false}
+          key="/about"
+          path="/about"
+        />
+        <Route
+          component={[Function]}
+          exact={false}
+          key="/gallery"
+          path="/gallery"
+        />
+      </main>
+    </div>
+  </BrowserRouter>
+</MuiThemeProviderOld>
+`;
+
+exports[`App renders with default props 1`] = `
 <MuiThemeProviderOld
   theme={Object {}}
 >
