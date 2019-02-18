@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DrawerContent snapshots renders default props 1`] = `
+exports[`DrawerContent renders default props 1`] = `
 <div>
   <div
     className="toolbar"
@@ -8,8 +8,11 @@ exports[`DrawerContent snapshots renders default props 1`] = `
   <WithStyles(Divider) />
   <WithStyles(List) />
   <WithStyles(Divider) />
-  <WithStyles(ListItem)>
+  <WithStyles(ListItem)
+    className="darkMode"
+  >
     <WithStyles(Switch)
+      checked={false}
       color="primary"
       onChange={[Function]}
     />
@@ -41,7 +44,51 @@ exports[`DrawerContent snapshots renders default props 1`] = `
 </div>
 `;
 
-exports[`DrawerContent snapshots renders with items 1`] = `
+exports[`DrawerContent renders with \`isDarkMode\` true 1`] = `
+<div>
+  <div
+    className="toolbar"
+  />
+  <WithStyles(Divider) />
+  <WithStyles(List) />
+  <WithStyles(Divider) />
+  <WithStyles(ListItem)
+    className="darkMode"
+  >
+    <WithStyles(Switch)
+      checked={true}
+      color="primary"
+      onChange={[Function]}
+    />
+    <WithStyles(ListItemText)
+      primary="Dark Mode"
+    />
+  </WithStyles(ListItem)>
+  <WithStyles(Divider) />
+  <div
+    className="social"
+  >
+    <div
+      className="twitter"
+    >
+      <Follow
+        onLoad={[Function]}
+        options={Object {}}
+        username="chrisdopuch"
+      />
+    </div>
+    <a
+      aria-label="Follow @chrisdopuch on GitHub"
+      className="github-button"
+      href="https://github.com/chrisdopuch"
+    >
+      Follow @chrisdopuch
+    </a>
+  </div>
+</div>
+`;
+
+exports[`DrawerContent renders with items 1`] = `
 <div>
   <div
     className="toolbar"
@@ -56,7 +103,9 @@ exports[`DrawerContent snapshots renders with items 1`] = `
       to="/"
     >
       <WithStyles(ListItemIcon)>
-        <mockConstructor />
+        <mockConstructor
+          className="listItemIcon"
+        />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         primary="Home"
@@ -70,7 +119,9 @@ exports[`DrawerContent snapshots renders with items 1`] = `
       to="/about"
     >
       <WithStyles(ListItemIcon)>
-        <mockConstructor />
+        <mockConstructor
+          className="listItemIcon"
+        />
       </WithStyles(ListItemIcon)>
       <WithStyles(ListItemText)
         primary="About me"
@@ -78,8 +129,11 @@ exports[`DrawerContent snapshots renders with items 1`] = `
     </WithStyles(ListItem)>
   </WithStyles(List)>
   <WithStyles(Divider) />
-  <WithStyles(ListItem)>
+  <WithStyles(ListItem)
+    className="darkMode"
+  >
     <WithStyles(Switch)
+      checked={false}
       color="primary"
       onChange={[Function]}
     />
