@@ -8799,11 +8799,6 @@ react-grid-gallery@^0.5.3:
     prop-types "^15.5.8"
     react-images "^0.5.16"
 
-react-hookstore@^1.1.5:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-hookstore/-/react-hookstore-1.2.0.tgz#28afcda9d3b6d3ebd1500a9f7be24526de56446f"
-  integrity sha512-etSvHATUzSHW1IuKORnZTmlz5YxNiY9taywhl6AzkS2nrWOjmiCKTx42tn6wloEjJvbGpfoqApXZbXMja7m9Ww==
-
 react-images@^0.5.16:
   version "0.5.19"
   resolved "https://registry.yarnpkg.com/react-images/-/react-images-0.5.19.tgz#9339570029e065f9f28a19f03fdb5d9d5aa109d3"

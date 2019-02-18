@@ -7,10 +7,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import React, { ComponentType, SFC } from 'react';
-import { useStore } from 'react-hookstore';
 import { Link } from 'react-router-dom';
 import { Follow } from 'react-twitter-widgets';
-import { IAppStore, isDarkModeKey } from '../store';
+import useDispatch from '../hooks/useDispatch';
+import useGlobalState from '../hooks/useGlobalState';
+import { isDarkModeKey } from '../store';
 
 const stylesDeclarations = (theme: Theme) => {
   return createStyles({
@@ -41,7 +42,8 @@ interface IDrawerContentProps extends WithStyles<typeof stylesDeclarations> {
 
 export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
   const { classes, items } = props;
-  const [appStore, setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
+  const isDarkMode = useGlobalState('isDarkMode');
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -52,7 +54,7 @@ export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
           const linkProps = { to } as any;
           return (
             <ListItem
-              onClick={() => setStore(Object.assign({}, appStore, { isNavDrawerOpen: false }))}
+              onClick={() => dispatch({ type: 'setNavDrawerOpen', payload: false })}
               button={true}
               key={label}
               component={Link}
@@ -69,11 +71,11 @@ export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
       <Divider />
       <ListItem className={classes.darkMode}>
         <Switch
-          checked={appStore.isDarkMode}
+          checked={isDarkMode}
           onChange={(e) => {
-            const isDarkMode = e.target.checked;
-            localStorage.setItem(isDarkModeKey, isDarkMode.toString());
-            return setStore(Object.assign({}, appStore, { isDarkMode }));
+            const payload = e.target.checked;
+            localStorage.setItem(isDarkModeKey, payload.toString());
+            return dispatch({ type: 'setDarkMode', payload });
           }}
           color="primary"
         />

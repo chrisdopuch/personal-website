@@ -5,8 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import React, { SFC } from 'react';
-import { useStore } from 'react-hookstore';
-import { IAppStore } from '../store';
+import useDispatch from '../hooks/useDispatch';
 
 const stylesDeclarations = (theme: Theme) => {
   return createStyles({
@@ -28,7 +27,7 @@ interface ITitleBarProps extends WithStyles<typeof stylesDeclarations, true> {
 
 export const TitleBar: SFC<ITitleBarProps> = (props) => {
   const { classes, title } = props;
-  const [appStore, setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
+  const dispatch = useDispatch();
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
@@ -36,13 +35,7 @@ export const TitleBar: SFC<ITitleBarProps> = (props) => {
         <IconButton
           color="inherit"
           aria-label="Open drawer"
-          onClick={() =>
-            setStore(
-              Object.assign({}, appStore, {
-                isNavDrawerOpen: !appStore.isNavDrawerOpen,
-              })
-            )
-          }
+          onClick={() => dispatch({ type: 'toggleNavDrawerOpen' })}
           className={classes.menuButton}
         >
           <MenuIcon />

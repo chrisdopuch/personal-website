@@ -5,10 +5,9 @@ import CameraIcon from '@material-ui/icons/Camera';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
 import React from 'react';
-import { useStore } from 'react-hookstore';
 import Loadable from 'react-loadable';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { IAppStore } from '../store';
+import useGlobalState from '../hooks/useGlobalState';
 import { appTheme, darkTheme } from '../themes';
 import NavDrawer from './NavDrawer';
 import TitleBar from './TitleBar';
@@ -57,10 +56,10 @@ interface IAppProps extends WithStyles<typeof stylesDeclarations, true> {
 
 export const App: React.SFC<IAppProps> = (props) => {
   const { classes, title } = props;
-  const [appStore, _setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
+  const isDarkMode = useGlobalState('isDarkMode');
 
   return (
-    <MuiThemeProvider theme={appStore.isDarkMode ? darkTheme : appTheme}>
+    <MuiThemeProvider theme={isDarkMode ? darkTheme : appTheme}>
       <CssBaseline />
       <Router>
         <div className={classes.root}>

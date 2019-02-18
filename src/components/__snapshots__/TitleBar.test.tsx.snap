@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TitleBar snapshots renders default props 1`] = `
+exports[`TitleBar renders default props 1`] = `
 <WithStyles(AppBar)
   className="appBar"
   position="fixed"

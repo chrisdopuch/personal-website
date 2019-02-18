@@ -3,8 +3,8 @@ import Hidden from '@material-ui/core/Hidden';
 import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import React, { ComponentType, SFC } from 'react';
-import { useStore } from 'react-hookstore';
-import { IAppStore } from '../store';
+import useDispatch from '../hooks/useDispatch';
+import useGlobalState from '../hooks/useGlobalState';
 import DrawerContent from './DrawerContent';
 
 const drawerWidth = 240;
@@ -33,7 +33,8 @@ export interface INavDrawerProps extends WithStyles<typeof stylesDeclarations, t
 
 export const NavDrawer: SFC<INavDrawerProps> = (props) => {
   const { classes, theme, items } = props;
-  const [appStore, setStore]: [IAppStore, (s: IAppStore) => void] = useStore('appStore');
+  const isNavDrawerOpen = useGlobalState('isNavDrawerOpen');
+  const dispatch = useDispatch();
 
   return (
     <nav className={classes.drawer}>
@@ -41,8 +42,8 @@ export const NavDrawer: SFC<INavDrawerProps> = (props) => {
         <Drawer
           variant="temporary"
           anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-          open={appStore.isNavDrawerOpen}
-          onClose={() => setStore(Object.assign({}, appStore, { isNavDrawerOpen: false }))}
+          open={isNavDrawerOpen}
+          onClose={() => dispatch({ type: 'setNavDrawerOpen', payload: false })}
           classes={{
             paper: classes.drawerPaper,
           }}
