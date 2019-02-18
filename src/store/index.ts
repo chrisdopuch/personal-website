@@ -1,6 +1,6 @@
 export const isDarkModeKey = 'isDarkMode';
 
-const getPersistedIsDarkMode = () => {
+export const getPersistedIsDarkMode = () => {
   const persistedIsDarkMode = localStorage.getItem(isDarkModeKey);
   return persistedIsDarkMode !== null ? persistedIsDarkMode === 'true' : false;
 };
