@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import GoogleAnalytics from 'react-ga';
 import App from './components/App';
+import { StateProvider } from './components/contexts/state';
 import './index';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -23,7 +24,12 @@ jest.mock('react-ga', () => {
 
 describe('index', () => {
   it('should render', () => {
-    expect(render).toBeCalledWith(<App title="Dev: The Chris Dopuch Zone" />, null);
+    expect(render).toBeCalledWith(
+      <StateProvider>
+        <App title="Dev: The Chris Dopuch Zone" />
+      </StateProvider>,
+      null
+    );
   });
 
   it('should register service worker', () => {
