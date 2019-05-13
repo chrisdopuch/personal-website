@@ -69,7 +69,7 @@ const quickFacts: IQuickFact[] = [
   {
     Icon: WorkIcon,
     primary: 'Job Title',
-    secondary: 'Software Engineer at Moovel North America',
+    secondary: 'Frontend Engineer at Zapier inc.',
   },
   {
     Icon: SchoolIcon,
@@ -131,11 +131,11 @@ export const Header: SFC<IAboutProps> = (props) => {
       <Divider className={classes.divider} />
       <Typography component="p">
         Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from
-        Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I am
-        employed by Moovel North America where I work on web applications and services using technologies like NodeJS,
-        Typescript, React, and Redux. Outside of work I enjoy tabletop and roleplay gaming, watching cult movies, going
-        to heavy metal concerts, drawing, and painting. On this site you can find many examples of my work including my
-        art gallery as well as many of my programming projects.
+        Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I
+        work as a Frontend Engineer on the SEO and Marketing team at Zapier, where I work with technologies like React,
+        Redux, Next.js, Django, Apollo, and more! Outside of work I enjoy tabletop and roleplay gaming, watching cult
+        movies, going to heavy metal concerts, drawing, and painting. On this site you can find many examples of my work
+        including my art gallery as well as many of my programming projects.
       </Typography>
     </header>
   );
