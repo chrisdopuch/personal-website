@@ -999,9 +999,6 @@
 "@types/react-grid-gallery@file:types/react-grid-gallery":
   version "0.5.3"
 
-"@types/react-hookstore@file:types/react-hookstore":
-  version "1.0.8"
-
 "@types/react-loadable@^5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-5.5.0.tgz#7a878408ad940250aeb91d77d2b54a18f3c7c946"
