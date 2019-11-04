@@ -11,5 +11,5 @@ export default function usePageView(location: RouteComponentProps['location'], o
       ...options,
     });
     GoogleAnalytics.pageview(page);
-  }, [page]); // only track the page once per mount
+  }, [page, options]); // only track the page once per mount
 }
