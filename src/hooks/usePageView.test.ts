@@ -29,10 +29,10 @@ describe('usePageView', () => {
       search: '?bar=0',
     } as Location;
 
-    usePageView(location);
+    usePageView(location, {});
 
     expect(useEffect).toBeCalled();
-    expect((useEffect as jest.Mock).mock.calls[0][1]).toEqual([location.pathname + location.search]);
+    expect((useEffect as jest.Mock).mock.calls[0][1]).toEqual([location.pathname + location.search, {}]);
   });
 
   it('should pass a callback that calls into Google Analytics', () => {
