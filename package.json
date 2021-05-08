@@ -17,7 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "@types/react-loadable": "^5.5.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "material-ui": "^0.20.2",
     "prop-types": "^15.6.0",
     "react": "^16.11.0",
