@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.x
-      - run: yarn install
+      - run: yarn install --no-optional
       - run: yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

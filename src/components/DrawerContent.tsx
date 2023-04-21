@@ -8,7 +8,6 @@ import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/s
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import React, { ComponentType, SFC } from 'react';
 import { Link } from 'react-router-dom';
-import { Follow } from 'react-twitter-widgets';
 import useDispatch from '../hooks/useDispatch';
 import useGlobalState from '../hooks/useGlobalState';
 import { isDarkModeKey } from '../store';
@@ -26,9 +25,6 @@ const stylesDeclarations = (theme: Theme) => {
       textAlign: 'left',
     },
     toolbar: theme.mixins.toolbar,
-    twitter: {
-      marginBottom: '10px',
-    },
   });
 };
 
@@ -83,9 +79,6 @@ export const DrawerContent: SFC<IDrawerContentProps> = (props) => {
       </ListItem>
       <Divider />
       <div className={classes.social}>
-        <div className={classes.twitter}>
-          <Follow username="chrisdopuch" />
-        </div>
         <a className="github-button" href="https://github.com/chrisdopuch" aria-label="Follow @chrisdopuch on GitHub">
           Follow @chrisdopuch
         </a>
