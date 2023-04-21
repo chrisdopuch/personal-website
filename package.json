@@ -17,6 +17,7 @@
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "@types/react-loadable": "^5.5.0",
+    "firebase": "^9.20.0",
     "lodash": "^4.17.15",
     "material-ui": "^0.20.2",
     "prop-types": "^15.6.0",

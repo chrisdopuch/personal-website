@@ -150,15 +150,6 @@ export const Home: SFC<IHomeProps & RouteComponentProps<any>> = (props) => {
                 color="primary"
                 target="blank"
                 component="a"
-                href="https://www.twitter.com/ChrisDopuch"
-              >
-                Twitter
-              </Button>
-              <Button
-                size="small"
-                color="primary"
-                target="blank"
-                component="a"
                 href="https://facebook.com/chris.dopuch"
               >
                 Facebook
