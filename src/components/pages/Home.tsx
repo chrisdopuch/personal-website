@@ -14,8 +14,8 @@ import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import usePageView from '../../hooks/usePageView';
 import me from '../../images/headshot.jpg';
 import gitmoar from '../../thumbnails/gitmoar_thumb.jpg';
-import meInWoods from '../../thumbnails/me-in-woods_thumb.jpg';
-import diorama from '../../thumbnails/ruin_thumb.jpg';
+import gothWedding from '../../thumbnails/goth-wedding_thumb.jpg';
+import trenchDiorama from '../../thumbnails/trench-diorama-side_thumb.jpg';
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({
@@ -36,6 +36,16 @@ const stylesDeclarations = (theme: Theme) =>
     },
     media: {
       height: 120,
+    },
+    aboutMedia: {
+      height: 120,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center 30%',
+    },
+    galleryMedia: {
+      height: 120,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center 45%',
     },
     root: {
       paddingBottom: theme.spacing.unit * 2,
@@ -68,7 +78,7 @@ export const Home: SFC<IHomeProps & RouteComponentProps<any>> = (props) => {
         <Grid item={true} xs={true}>
           <Card className={classes.card}>
             <CardActionArea component={AboutLink}>
-              <CardMedia className={classes.media} image={meInWoods} title="About me" />
+              <CardMedia className={classes.aboutMedia} image={gothWedding} title="About me" />
               <CardContent>
                 <Typography gutterBottom={true} variant="h5" component="h2">
                   Learn About Me
@@ -89,7 +99,7 @@ export const Home: SFC<IHomeProps & RouteComponentProps<any>> = (props) => {
         <Grid item={true} xs={true}>
           <Card className={classes.card}>
             <CardActionArea component={GalleryLink}>
-              <CardMedia className={classes.media} image={diorama} title="Image Gallery" />
+              <CardMedia className={classes.galleryMedia} image={trenchDiorama} title="Image Gallery" />
               <CardContent>
                 <Typography gutterBottom={true} variant="h5" component="h2">
                   Browse Image Gallery
