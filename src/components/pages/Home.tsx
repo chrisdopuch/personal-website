@@ -12,17 +12,13 @@ import Typography from '@material-ui/core/Typography';
 import React, { SFC } from 'react';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import usePageView from '../../hooks/usePageView';
-import me from '../../images/me.jpg';
+import me from '../../images/headshot.jpg';
 import gitmoar from '../../thumbnails/gitmoar_thumb.jpg';
 import meInWoods from '../../thumbnails/me-in-woods_thumb.jpg';
 import diorama from '../../thumbnails/ruin_thumb.jpg';
 
 const stylesDeclarations = (theme: Theme) =>
   createStyles({
-    '@keyframes face-spin': {
-      from: { transform: 'rotate(0deg)' },
-      to: { transform: 'rotate(360deg)' },
-    },
     card: {
       maxWidth: 450,
     },
@@ -31,7 +27,6 @@ const stylesDeclarations = (theme: Theme) =>
       marginTop: 20,
     },
     face: {
-      animation: 'face-spin infinite 20s linear',
       borderRadius: '50%',
       height: '40vmin',
       margin: 10,
@@ -63,9 +58,9 @@ export const Home: SFC<IHomeProps & RouteComponentProps<any>> = (props) => {
     <Paper className={classes.root} elevation={1}>
       <Typography variant="h2">Home</Typography>
       <Divider className={classes.divider} />
-      <Typography variant="h4">Now entering the Chris Dopuch Zone</Typography>
+      <Typography variant="h4">Welcome to my personal website</Typography>
       <Typography variant="subtitle1">
-        <i>Where I wrote enough React code to make my head spin</i>
+        <i>Where I write about my career, my projects, and my life</i>
       </Typography>
       <img src={me} className={classes.face} alt="my-face" />
       <Divider className={classes.divider} />
