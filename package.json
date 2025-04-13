@@ -13,7 +13,8 @@
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
     "coveralls": "yarn test -- --coverage && cat ./coverage/lcov.info | coveralls",
-    "thumbnails": "thumb --ignore --overwrite --skip --width 300 src/images src/thumbnails"
+    "thumbnails": "thumb --ignore --overwrite --skip --width 300 src/images src/thumbnails",
+    "thumbnail-dimensions": "node get-thumbnail-dimensions.js"
   },
   "dependencies": {
     "@material-ui/core": "^3.2.2",
@@ -30,6 +31,7 @@
     "react-router-dom": "^4.3.1",
     "react-social-github": "^2.1.1",
     "react-twitter-widgets": "^1.7.1",
+    "sharp": "^0.34.1",
     "tslint-react": "^3.6.0"
   },
   "devDependencies": {

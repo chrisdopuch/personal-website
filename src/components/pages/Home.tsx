@@ -30,8 +30,8 @@ const stylesDeclarations = (theme: Theme) =>
       borderRadius: '50%',
       height: '40vmin',
       margin: 10,
-      maxHeight: 260,
-      maxWidth: 260,
+      maxHeight: 400,
+      maxWidth: 400,
       width: 'auto',
     },
     media: {

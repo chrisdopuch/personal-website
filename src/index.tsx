@@ -24,7 +24,7 @@ GoogleAnalytics.initialize('UA-128558512-1', { testMode: !isProduction });
 
 ReactDOM.render(
   <StateProvider>
-    <App title={`${!isProduction ? 'Dev: ' : ''}The Chris Dopuch Zone`} />
+    <App title={`${!isProduction ? 'Dev: ' : ''}Chris Dopuch Devs`} />
   </StateProvider>,
   document.getElementById('root') as HTMLElement
 );

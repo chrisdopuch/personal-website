@@ -36,6 +36,13 @@ exports[`App renders when \`isDarkMode\` is true 1`] = `
               "page": [Function],
               "to": "/gallery",
             },
+            Object {
+              "Icon": [Function],
+              "isRouteExact": false,
+              "label": "Resume",
+              "page": [Function],
+              "to": "/resume",
+            },
           ]
         }
       />
@@ -62,6 +69,12 @@ exports[`App renders when \`isDarkMode\` is true 1`] = `
           exact={false}
           key="/gallery"
           path="/gallery"
+        />
+        <Route
+          component={[Function]}
+          exact={false}
+          key="/resume"
+          path="/resume"
         />
       </main>
     </div>
@@ -105,6 +118,13 @@ exports[`App renders with default props 1`] = `
               "page": [Function],
               "to": "/gallery",
             },
+            Object {
+              "Icon": [Function],
+              "isRouteExact": false,
+              "label": "Resume",
+              "page": [Function],
+              "to": "/resume",
+            },
           ]
         }
       />
@@ -131,6 +151,12 @@ exports[`App renders with default props 1`] = `
           exact={false}
           key="/gallery"
           path="/gallery"
+        />
+        <Route
+          component={[Function]}
+          exact={false}
+          key="/resume"
+          path="/resume"
         />
       </main>
     </div>
