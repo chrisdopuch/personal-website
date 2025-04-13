@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "start:windows": "NODE_OPTIONS=--openssl-legacy-provider && yarn start",
