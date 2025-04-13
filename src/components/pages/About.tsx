@@ -27,6 +27,8 @@ const stylesDeclarations = (theme: Theme) =>
       height: '27vw',
       margin: 20,
       width: '27vw',
+      maxWidth: 500,
+      maxHeight: 500,
     },
     centered: {
       display: 'flex',
