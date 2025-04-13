@@ -4,6 +4,7 @@ import { createStyles, MuiThemeProvider, Theme, WithStyles, withStyles } from '@
 import CameraIcon from '@material-ui/icons/Camera';
 import HelpIcon from '@material-ui/icons/Help';
 import HomeIcon from '@material-ui/icons/Home';
+import ArticleIcon from '@material-ui/icons/Attachment';
 import React from 'react';
 import Loadable from 'react-loadable';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -11,7 +12,7 @@ import useGlobalState from '../hooks/useGlobalState';
 import { appTheme, darkTheme } from '../themes';
 import NavDrawer from './NavDrawer';
 import TitleBar from './TitleBar';
-
+import Resume from './pages/Resume';
 const loading = () => {
   return <CircularProgress />;
 };
@@ -33,6 +34,7 @@ const navBarItems = [
   { to: '/', label: 'Home', Icon: HomeIcon, isRouteExact: true, page: Home },
   { to: '/about', label: 'About me', Icon: HelpIcon, isRouteExact: false, page: About },
   { to: '/gallery', label: 'Gallery', Icon: CameraIcon, isRouteExact: false, page: Gallery },
+  { to: '/resume', label: 'Resume', Icon: ArticleIcon, isRouteExact: false, page: Resume },
 ];
 
 const stylesDeclarations = (theme: Theme) => {

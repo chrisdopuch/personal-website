@@ -48,6 +48,8 @@ const stylesDeclarations = (theme: Theme) =>
       backgroundPosition: 'center 45%',
     },
     root: {
+      maxWidth: 1200,
+      margin: '0 auto',
       paddingBottom: theme.spacing.unit * 2,
       paddingLeft: theme.spacing.unit * 2,
       paddingRight: theme.spacing.unit * 3,
