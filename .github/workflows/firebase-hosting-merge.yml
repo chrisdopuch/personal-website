@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 14.x
       - run: yarn install --no-optional
-      - run: yarn build
+      - run: yarn build:ci
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
