@@ -5,14 +5,17 @@
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
+    "start:windows": "NODE_OPTIONS=--openssl-legacy-provider && yarn start",
     "build": "react-scripts build",
+    "build:ci": "NODE_OPTIONS=--openssl-legacy-provider yarn install --frozen-lockfile && NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "build:stats": "react-scripts build --stats && webpack-bundle-analyzer build/bundle-stats.json -m static -r build/bundle-stats.html -O",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,tsx}\" && npm run lint -- --fix",
     "coveralls": "yarn test -- --coverage && cat ./coverage/lcov.info | coveralls",
-    "thumbnails": "thumb --ignore --overwrite --skip --width 300 src/images src/thumbnails"
+    "thumbnails": "thumb --ignore --overwrite --skip --width 300 src/images src/thumbnails",
+    "thumbnail-dimensions": "node get-thumbnail-dimensions.js"
   },
   "dependencies": {
     "@material-ui/core": "^3.2.2",
@@ -29,6 +32,7 @@
     "react-router-dom": "^4.3.1",
     "react-social-github": "^2.1.1",
     "react-twitter-widgets": "^1.7.1",
+    "sharp": "^0.34.1",
     "tslint-react": "^3.6.0"
   },
   "devDependencies": {

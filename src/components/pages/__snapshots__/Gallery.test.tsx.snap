@@ -19,229 +19,678 @@ exports[`Gallery should render with default props 1`] = `
   <WithStyles(Divider)
     className="divider"
   />
-  <Gallery
-    backdropClosesModal={false}
-    currentImage={0}
-    enableImageSelection={false}
-    enableKeyboardInput={true}
-    enableLightbox={true}
-    id="ReactGridGallery"
-    imageCountSeparator=" of "
-    images={
-      Array [
-        Object {
-          "caption": "Sorscha (Warmachine)",
-          "src": "sorscha.jpg",
-          "thumbnail": "sorscha_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Derwyd the Druid (Friend's D&D Character, HeroForge)",
-          "src": "derwyd.jpg",
-          "thumbnail": "derwyd_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Me busting out some Lady Gaga Karaoke",
-          "src": "me-singing.jpg",
-          "thumbnail": "me-singing_thumb.jpg",
-          "thumbnailHeight": 300,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Me wearing armor in the SCA",
-          "src": "me-at-lillies.jpg",
-          "thumbnail": "me-at-lillies_thumb.jpg",
-          "thumbnailHeight": 400,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Warhammer 40,000 Trench Diorama (front)",
-          "src": "trench-diorama-front.jpg",
-          "thumbnail": "trench-diorama-front_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Warhammer 40,000 Trench Diorama (side)",
-          "src": "trench-diorama-side.jpg",
-          "thumbnail": "trench-diorama-side_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Gitmoar, a data visualization hackathon project",
-          "src": "gitmoar.jpg",
-          "thumbnail": "gitmoar_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Me hiking in Washington Park, Portland OR",
-          "src": "me-in-woods.jpg",
-          "thumbnail": "me-in-woods_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "At Steak 'n Shake, the greatest restaurant of all",
-          "src": "me-at-steak-n-shake.jpg",
-          "thumbnail": "me-at-steak-n-shake_thumb.jpg",
-          "thumbnailHeight": 400,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Me when I worked at AppNexus",
-          "src": "me-at-appnexus.jpg",
-          "thumbnail": "me-at-appnexus_thumb.jpg",
-          "thumbnailHeight": 219,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Black Templars Marshal (Warhammer 40k)",
-          "src": "marshal.jpg",
-          "thumbnail": "marshal_thumb.jpg",
-          "thumbnailHeight": 334,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Black Templars Landraider (Warhammer 40k)",
-          "src": "landraider.jpg",
-          "thumbnail": "landraider_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Black Templars Dreadnought (Warhammer 40k)",
-          "src": "dreadnought.jpg",
-          "thumbnail": "dreadnought_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Cesnica, a Traditional Serbian Christmas bread I baked",
-          "src": "cesnica.jpg",
-          "thumbnail": "cesnica_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "My custom-built gaming PC",
-          "src": "gaming-rig.jpg",
-          "thumbnail": "gaming-rig_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "CS Senior-Capstone UAV Computer Vision Project",
-          "src": "capstone-project.jpg",
-          "thumbnail": "capstone-project_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Vandana the Bard (Friend's D&D Character, Reaper)",
-          "src": "vandana.jpg",
-          "thumbnail": "vandana_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Ekmuss the Warlock (Friend's D&D Character, Reaper)",
-          "src": "ekmuss.jpg",
-          "thumbnail": "ekmuss_thumb.jpg",
-          "thumbnailHeight": 400,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Gnoll Leader (Reaper Bones)",
-          "src": "gnoll.jpg",
-          "thumbnail": "gnoll_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Black Dragon Pikemen (Warmachine)",
-          "src": "black-dragons.jpg",
-          "thumbnail": "black-dragons_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Some of my laptop sticker layouts from the past",
-          "src": "laptop-stickers.jpg",
-          "thumbnail": "laptop-stickers_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Juggernaut (Warmachine)",
-          "src": "juggernaut.jpg",
-          "thumbnail": "juggernaut_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Vladimir (a Pathfinder OC of mine)",
-          "src": "vlad.jpg",
-          "thumbnail": "vlad_thumb.jpg",
-          "thumbnailHeight": 404,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Beast 09 (Warmachine)",
-          "src": "beast-09.jpg",
-          "thumbnail": "beast-09_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Widowmakers (Warmachine)",
-          "src": "widowmakers.jpg",
-          "thumbnail": "widowmakers_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "The Butcher (Warmachine)",
-          "src": "butcher.jpg",
-          "thumbnail": "butcher_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Mandy (from the movie Mandy)",
-          "src": "mandy.jpg",
-          "thumbnail": "mandy_thumb.jpg",
-          "thumbnailHeight": 200,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Ruin (Warmachine)",
-          "src": "ruin.jpg",
-          "thumbnail": "ruin_thumb.jpg",
-          "thumbnailHeight": 169,
-          "thumbnailWidth": 300,
-        },
-        Object {
-          "caption": "Alexia and Valachev (Warmachine)",
-          "src": "alexia-valachev.jpg",
-          "thumbnail": "alexia-valachev_thumb.jpg",
-          "thumbnailHeight": 225,
-          "thumbnailWidth": 300,
-        },
-      ]
-    }
-    isOpen={false}
-    lightboxWidth={1024}
-    margin={2}
-    preloadNextImage={true}
-    rowHeight={180}
-    showCloseButton={true}
-    showImageCount={true}
-    showLightboxThumbnails={false}
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        component="h4"
+        variant="h3"
+      >
+        Career and Technology
+      </WithStyles(Typography)>
+      <Gallery
+        backdropClosesModal={false}
+        currentImage={0}
+        enableImageSelection={false}
+        enableKeyboardInput={true}
+        enableLightbox={true}
+        id="ReactGridGallery"
+        imageCountSeparator=" of "
+        images={
+          Array [
+            Object {
+              "caption": "Me when I worked at AppNexus",
+              "src": "me-at-appnexus.jpg",
+              "thumbnail": "me-at-appnexus_thumb.jpg",
+              "thumbnailHeight": 219,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "On a scavenger hunt at Moovel",
+              "src": "moovel-scavenger-hunt.jpg",
+              "thumbnail": "moovel-scavenger-hunt_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Karaoke at AppNexus Holiday Party",
+              "src": "me-singing.jpg",
+              "thumbnail": "me-singing_thumb.jpg",
+              "thumbnailHeight": 300,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Gitmoar, a data visualization hackathon project",
+              "src": "gitmoar.jpg",
+              "thumbnail": "gitmoar_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My SLA Resin 3D printer",
+              "src": "sla-printer.jpg",
+              "thumbnail": "sla-printer_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My custom-built gaming PC",
+              "src": "gaming-rig.jpg",
+              "thumbnail": "gaming-rig_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "CS Senior-Capstone UAV Computer Vision Project",
+              "src": "capstone-project.jpg",
+              "thumbnail": "capstone-project_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Some of my laptop sticker layouts from the past",
+              "src": "laptop-stickers.jpg",
+              "thumbnail": "laptop-stickers_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Zapier Minneapolis Off-site trip",
+              "src": "minneapolis-offsite.jpg",
+              "thumbnail": "minneapolis-offsite_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My A1-mini 3D printer",
+              "src": "a1-mini.jpg",
+              "thumbnail": "a1-mini_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me at Headaway 2024 Retreat",
+              "src": "headaway-2024.jpg",
+              "thumbnail": "headaway-2024_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Seattle Team Offsite 2024",
+              "src": "seattle-offsite-2024.jpg",
+              "thumbnail": "seattle-offsite-2024_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+          ]
+        }
+        isOpen={false}
+        lightboxWidth={1024}
+        margin={2}
+        preloadNextImage={true}
+        rowHeight={180}
+        showCloseButton={true}
+        showImageCount={true}
+        showLightboxThumbnails={false}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider)
+    className="divider"
   />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        component="h4"
+        variant="h3"
+      >
+        Life and Travel
+      </WithStyles(Typography)>
+      <Gallery
+        backdropClosesModal={false}
+        currentImage={0}
+        enableImageSelection={false}
+        enableKeyboardInput={true}
+        enableLightbox={true}
+        id="ReactGridGallery"
+        imageCountSeparator=" of "
+        images={
+          Array [
+            Object {
+              "caption": "Me hiking in Washington Park, Portland OR",
+              "src": "me-in-woods.jpg",
+              "thumbnail": "me-in-woods_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Getting the keys to our first house",
+              "src": "house-keys.jpg",
+              "thumbnail": "house-keys_thumb.jpg",
+              "thumbnailHeight": 400,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me at Plitvice Lakes National Park, Croatia",
+              "src": "plitvice.jpg",
+              "thumbnail": "plitvice_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "At Steak 'n Shake, the greatest restaurant of all",
+              "src": "me-at-steak-n-shake.jpg",
+              "thumbnail": "me-at-steak-n-shake_thumb.jpg",
+              "thumbnailHeight": 400,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me, very confused at a fake Steak 'n Shake",
+              "src": "steak-n-fake.jpg",
+              "thumbnail": "steak-n-fake_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Hiking on Mount Hood with my family",
+              "src": "mount-hood.jpg",
+              "thumbnail": "mount-hood_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Hiking at Smith Rock, Oregon",
+              "src": "smith-rock.jpg",
+              "thumbnail": "smith-rock_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My wife and I getting eloped at the rose garden, Portland OR",
+              "src": "elopement.jpg",
+              "thumbnail": "elopement_thumb.jpg",
+              "thumbnailHeight": 400,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me proposing to my wife at Frankfort pier, Michigan",
+              "src": "proposal.jpg",
+              "thumbnail": "proposal_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Walking in Forest Park, Portland Oregon",
+              "src": "forest-park.jpg",
+              "thumbnail": "forest-park_thumb.jpg",
+              "thumbnailHeight": 400,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My wife and I in Ljubljana, Slovenia",
+              "src": "ljubljana.jpg",
+              "thumbnail": "ljubljana_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Folk music concert in Zadar, Croatia",
+              "src": "folk-concert-zadar.jpg",
+              "thumbnail": "folk-concert-zadar_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My wife and I on the Adriatic Coast of Croatia",
+              "src": "adriatic-coast.jpg",
+              "thumbnail": "adriatic-coast_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My wife and I at Crater Lake, Oregon",
+              "src": "crater-lake.jpg",
+              "thumbnail": "crater-lake_thumb.jpg",
+              "thumbnailHeight": 398,
+              "thumbnailWidth": 300,
+            },
+          ]
+        }
+        isOpen={false}
+        lightboxWidth={1024}
+        margin={2}
+        preloadNextImage={true}
+        rowHeight={180}
+        showCloseButton={true}
+        showImageCount={true}
+        showLightboxThumbnails={false}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        component="h4"
+        variant="h3"
+      >
+        Miniatures
+      </WithStyles(Typography)>
+      <Gallery
+        backdropClosesModal={false}
+        currentImage={0}
+        enableImageSelection={false}
+        enableKeyboardInput={true}
+        enableLightbox={true}
+        id="ReactGridGallery"
+        imageCountSeparator=" of "
+        images={
+          Array [
+            Object {
+              "caption": "Sorscha (Warmachine)",
+              "src": "sorscha.jpg",
+              "thumbnail": "sorscha_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Warhammer 40,000 Trench Diorama (front)",
+              "src": "trench-diorama-front.jpg",
+              "thumbnail": "trench-diorama-front_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Warhammer 40,000 Trench Diorama (side)",
+              "src": "trench-diorama-side.jpg",
+              "thumbnail": "trench-diorama-side_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Black Templars Marshal (Warhammer 40k)",
+              "src": "marshal.jpg",
+              "thumbnail": "marshal_thumb.jpg",
+              "thumbnailHeight": 334,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Black Templars Landraider (Warhammer 40k)",
+              "src": "landraider.jpg",
+              "thumbnail": "landraider_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Black Templars Dreadnought (Warhammer 40k)",
+              "src": "dreadnought.jpg",
+              "thumbnail": "dreadnought_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Ruin (Warmachine)",
+              "src": "ruin.jpg",
+              "thumbnail": "ruin_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Alexia and Valachev (Warmachine)",
+              "src": "alexia-valachev.jpg",
+              "thumbnail": "alexia-valachev_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Saxon Cavalry (Saga)",
+              "src": "saxon-cavalry.jpg",
+              "thumbnail": "saxon-cavalry_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Kingdoms of Men vs Ogre Kingdoms (Kings of War)",
+              "src": "men-vs-gators.jpg",
+              "thumbnail": "men-vs-gators_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Juggernaut (Warmachine)",
+              "src": "juggernaut.jpg",
+              "thumbnail": "juggernaut_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Beast 09 (Warmachine)",
+              "src": "beast-09.jpg",
+              "thumbnail": "beast-09_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "The Butcher (Warmachine)",
+              "src": "butcher.jpg",
+              "thumbnail": "butcher_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Celtic Druid (Kings of War)",
+              "src": "celtic-druid.jpg",
+              "thumbnail": "celtic-druid_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Zerilieth, Dark Elven General (Kings of War)",
+              "src": "zerilieth.jpg",
+              "thumbnail": "zerilieth_thumb.jpg",
+              "thumbnailHeight": 398,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Celtic Archers (Kings of War)",
+              "src": "celtic-archers.jpg",
+              "thumbnail": "celtic-archers_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Saxons vs Greeks (Saga)",
+              "src": "saxons-vs-greeks.jpg",
+              "thumbnail": "saxons-vs-greeks_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Sankuri, Dark Sorceress (Kings of War)",
+              "src": "sankuri.jpg",
+              "thumbnail": "sankuri_thumb.jpg",
+              "thumbnailHeight": 398,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Celtic General on Wyvern (Kings of War)",
+              "src": "celtic-general.jpg",
+              "thumbnail": "celtic-general_thumb.jpg",
+              "thumbnailHeight": 399,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Baba Yaga's Hut (Saga)",
+              "src": "baba-yaga.jpg",
+              "thumbnail": "baba-yaga_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+          ]
+        }
+        isOpen={false}
+        lightboxWidth={1024}
+        margin={2}
+        preloadNextImage={true}
+        rowHeight={180}
+        showCloseButton={true}
+        showImageCount={true}
+        showLightboxThumbnails={false}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        component="h4"
+        variant="h3"
+      >
+        Art
+      </WithStyles(Typography)>
+      <Gallery
+        backdropClosesModal={false}
+        currentImage={0}
+        enableImageSelection={false}
+        enableKeyboardInput={true}
+        enableLightbox={true}
+        id="ReactGridGallery"
+        imageCountSeparator=" of "
+        images={
+          Array [
+            Object {
+              "caption": "Mandy (from the movie Mandy)",
+              "src": "mandy.jpg",
+              "thumbnail": "mandy_thumb.jpg",
+              "thumbnailHeight": 200,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Vladimir (a Pathfinder OC of mine)",
+              "src": "vlad.jpg",
+              "thumbnail": "vlad_thumb.jpg",
+              "thumbnailHeight": 404,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Ekmuss the Warlock (Friend's D&D Character, Reaper)",
+              "src": "ekmuss.jpg",
+              "thumbnail": "ekmuss_thumb.jpg",
+              "thumbnailHeight": 400,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My take on the Sun tarot card",
+              "src": "the-sun.jpg",
+              "thumbnail": "the-sun_thumb.jpg",
+              "thumbnailHeight": 398,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My sister's cats, in a medieval illuminated manuscript style",
+              "src": "medieval-cats.jpg",
+              "thumbnail": "medieval-cats_thumb.jpg",
+              "thumbnailHeight": 227,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "An esoteric mandala that contains significant personal meaning",
+              "src": "mandala.jpg",
+              "thumbnail": "mandala_thumb.jpg",
+              "thumbnailHeight": 381,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "An armored fencer",
+              "src": "fencer.jpg",
+              "thumbnail": "fencer_thumb.jpg",
+              "thumbnailHeight": 362,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My take on Red Sonja, the comic book heroine",
+              "src": "red-sonja.jpg",
+              "thumbnail": "red-sonja_thumb.jpg",
+              "thumbnailHeight": 348,
+              "thumbnailWidth": 300,
+            },
+          ]
+        }
+        isOpen={false}
+        lightboxWidth={1024}
+        margin={2}
+        preloadNextImage={true}
+        rowHeight={180}
+        showCloseButton={true}
+        showImageCount={true}
+        showLightboxThumbnails={false}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Divider)
+    className="divider"
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={24}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        component="h4"
+        variant="h3"
+      >
+        Reenactment and Culture
+      </WithStyles(Typography)>
+      <Gallery
+        backdropClosesModal={false}
+        currentImage={0}
+        enableImageSelection={false}
+        enableKeyboardInput={true}
+        enableLightbox={true}
+        id="ReactGridGallery"
+        imageCountSeparator=" of "
+        images={
+          Array [
+            Object {
+              "caption": "Me wearing armor in the SCA",
+              "src": "me-at-lillies.jpg",
+              "thumbnail": "me-at-lillies_thumb.jpg",
+              "thumbnailHeight": 400,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me at the Portland Serbian Festival",
+              "src": "serbian-fest.jpg",
+              "thumbnail": "serbian-fest_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Cesnica, a Traditional Serbian Christmas bread I baked",
+              "src": "cesnica.jpg",
+              "thumbnail": "cesnica_thumb.jpg",
+              "thumbnailHeight": 169,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Another Cesnica bread, Chrismas 2021",
+              "src": "cesnica-2021.jpg",
+              "thumbnail": "cesnica-2021_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Another Cesnica bread, Chrismas 2020",
+              "src": "cesnica-2020.jpg",
+              "thumbnail": "cesnica-2020_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My wife and I at a Renaissance Faire themed wedding",
+              "src": "goth-wedding.jpg",
+              "thumbnail": "goth-wedding_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My eastern european style armor",
+              "src": "armor.jpg",
+              "thumbnail": "armor_thumb.jpg",
+              "thumbnailHeight": 304,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My custom made lamellar cuirass",
+              "src": "lamellar-armor.jpg",
+              "thumbnail": "lamellar-armor_thumb.jpg",
+              "thumbnailHeight": 398,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me and my friend at the Portland Viking Festival",
+              "src": "viking-fest.jpg",
+              "thumbnail": "viking-fest_thumb.jpg",
+              "thumbnailHeight": 398,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me and my wife at the Portland Viking Festival",
+              "src": "viking-boat.jpg",
+              "thumbnail": "viking-boat_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me and my wife just being medieval in the woods",
+              "src": "medievaling.jpg",
+              "thumbnail": "medievaling_thumb.jpg",
+              "thumbnailHeight": 226,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "Me hanging out with roman soldiers in Diocletian's Palace, Split Croatia",
+              "src": "romans.jpg",
+              "thumbnail": "romans_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My earliest medieval reenactment days in Peace Park, Columbia Missouri",
+              "src": "peace-park.jpg",
+              "thumbnail": "peace-park_thumb.jpg",
+              "thumbnailHeight": 200,
+              "thumbnailWidth": 300,
+            },
+            Object {
+              "caption": "My homebrewed mead",
+              "src": "mead-bottles.jpg",
+              "thumbnail": "mead-bottles_thumb.jpg",
+              "thumbnailHeight": 225,
+              "thumbnailWidth": 300,
+            },
+          ]
+        }
+        isOpen={false}
+        lightboxWidth={1024}
+        margin={2}
+        preloadNextImage={true}
+        rowHeight={180}
+        showCloseButton={true}
+        showImageCount={true}
+        showLightboxThumbnails={false}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
 </WithStyles(Paper)>
 `;

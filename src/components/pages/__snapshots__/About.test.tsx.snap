@@ -11,11 +11,19 @@ exports[`About Header should render with default props 1`] = `
   <WithStyles(Divider)
     className="divider"
   />
-  <WithStyles(Typography)
-    component="p"
-  >
-    Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I work as a Frontend Engineer on the SEO and Marketing team at Zapier, where I work with technologies like React, Redux, Next.js, Django, Apollo, and more! Outside of work I enjoy tabletop and roleplay gaming, watching cult movies, going to heavy metal concerts, drawing, and painting. On this site you can find many examples of my work including my art gallery as well as many of my programming projects.
-  </WithStyles(Typography)>
+  <section>
+    <WithStyles(Typography)
+      component="p"
+    >
+      Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I work as a Senior Software Engineer on the Trust Foundations team at Headway, where I work with technologies like Python, TypeScript, FastAPI, React, PostgreSQL, and more! My team is responsible for the core auth infrastructure that powers Headway's products, including authentication, authorization, privacy, security auditing, and other features that guard the integrity of Headway's products and data. I'm passionate about mental health and providing accessible therapy for all!
+    </WithStyles(Typography)>
+    <br />
+    <WithStyles(Typography)
+      component="p"
+    >
+      Outside of work I'm a rennaissance man with many passions and hobbies. My interests include painting, drawing, photography, gaming, and medieval reenactment. I am also an avid fitness enthusiast, with interests in weight lifting, running, yoga, and martial arts. On this site you can find many examples of my work including my art gallery as well as many of my programming projects.
+    </WithStyles(Typography)>
+  </section>
 </header>
 `;
 
@@ -200,7 +208,7 @@ exports[`About QuickFacts should render with default props 1`] = `
         </WithStyles(ListItemAvatar)>
         <WithStyles(ListItemText)
           primary="Job Title"
-          secondary="Frontend Engineer at Zapier inc."
+          secondary="Senior Software Engineer at Headway"
         />
       </WithStyles(ListItem)>
       <WithStyles(ListItem)
@@ -227,8 +235,8 @@ exports[`About QuickFacts should render with default props 1`] = `
         />
       </WithStyles(ListItem)>
       <WithStyles(ListItem)
-        divider={false}
-        key="Technologies"
+        divider={true}
+        key="Frontend Technologies"
       >
         <WithStyles(ListItemAvatar)>
           <WithStyles(Avatar)>
@@ -236,17 +244,22 @@ exports[`About QuickFacts should render with default props 1`] = `
           </WithStyles(Avatar)>
         </WithStyles(ListItemAvatar)>
         <WithStyles(ListItemText)
-          primary="Technologies"
-          secondary="NodeJS, Typescript, React, Redux, Express, HapiJS"
+          primary="Frontend Technologies"
+          secondary="HTML, CSS, JavaScript, React, TypeScript, TailwindCSS, Material-UI, NextJS"
         />
       </WithStyles(ListItem)>
       <WithStyles(ListItem)
         divider={true}
-        key="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+        key="Backend Technologies"
       >
+        <WithStyles(ListItemAvatar)>
+          <WithStyles(Avatar)>
+            <pure(ComputerIcon) />
+          </WithStyles(Avatar)>
+        </WithStyles(ListItemAvatar)>
         <WithStyles(ListItemText)
-          inset={true}
-          secondary="Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP"
+          primary="Backend Technologies"
+          secondary="Python, NodeJS, PHP, FastAPI, Django, PostgreSQL, Docker, Kubernetes, AWS"
         />
       </WithStyles(ListItem)>
       <WithStyles(ListItem)

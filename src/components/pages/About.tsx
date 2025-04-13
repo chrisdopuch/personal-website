@@ -11,6 +11,7 @@ import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/s
 import { SvgIconProps } from '@material-ui/core/SvgIcon';
 import Typography from '@material-ui/core/Typography';
 import BuildIcon from '@material-ui/icons/Build';
+import ComputerIcon from '@material-ui/icons/Computer';
 import CodeIcon from '@material-ui/icons/Code';
 import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
@@ -43,11 +44,18 @@ const stylesDeclarations = (theme: Theme) =>
       marginTop: 10,
     },
     root: {
+      maxWidth: 1500,
+      margin: '0 auto',
       paddingBottom: theme.spacing.unit * 2,
       paddingLeft: theme.spacing.unit * 2,
       paddingRight: theme.spacing.unit * 3,
       paddingTop: theme.spacing.unit * 3,
       ...theme.mixins.gutters(),
+    },
+    about: {
+      marginBottom: 20,
+      maxWidth: 1000,
+      margin: '0 auto',
     },
   });
 
@@ -69,7 +77,7 @@ const quickFacts: IQuickFact[] = [
   {
     Icon: WorkIcon,
     primary: 'Job Title',
-    secondary: 'Frontend Engineer at Zapier inc.',
+    secondary: 'Senior Software Engineer at Headway',
   },
   {
     Icon: SchoolIcon,
@@ -79,9 +87,13 @@ const quickFacts: IQuickFact[] = [
   },
   {
     Icon: BuildIcon,
-    primary: 'Technologies',
-    secondary: 'NodeJS, Typescript, React, Redux, Express, HapiJS',
-    tertiary: 'Go, Ruby on Rails, Swagger, LESS, SASS, Webpack, PHP',
+    primary: 'Frontend Technologies',
+    secondary: 'HTML, CSS, JavaScript, React, TypeScript, TailwindCSS, Material-UI, NextJS',
+  },
+  {
+    Icon: ComputerIcon,
+    primary: 'Backend Technologies',
+    secondary: 'Python, NodeJS, PHP, FastAPI, Django, PostgreSQL, Docker, Kubernetes, AWS',
   },
   {
     Icon: CodeIcon,
@@ -129,14 +141,24 @@ export const Header: SFC<IAboutProps> = (props) => {
         About me
       </Typography>
       <Divider className={classes.divider} />
-      <Typography component="p">
-        Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from
-        Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I
-        work as a Frontend Engineer on the SEO and Marketing team at Zapier, where I work with technologies like React,
-        Redux, Next.js, Django, Apollo, and more! Outside of work I enjoy tabletop and roleplay gaming, watching cult
-        movies, going to heavy metal concerts, drawing, and painting. On this site you can find many examples of my work
-        including my art gallery as well as many of my programming projects.
-      </Typography>
+      <section className={classes.about}>
+        <Typography component="p">
+          Hi, my name is Chris Dopuch and I'm a Software Engineer working in Portland, Oregon. I moved to Portland from
+          Columbia, Missouri after graduating from University of Missouri with both a CS and an IT degree. Currently I
+          work as a Senior Software Engineer on the Trust Foundations team at Headway, where I work with technologies
+          like Python, TypeScript, FastAPI, React, PostgreSQL, and more! My team is responsible for the core auth
+          infrastructure that powers Headway's products, including authentication, authorization, privacy, security
+          auditing, and other features that guard the integrity of Headway's products and data. I'm passionate about
+          mental health and providing accessible therapy for all!
+        </Typography>
+        <br />
+        <Typography component="p">
+          Outside of work I'm a rennaissance man with many passions and hobbies. My interests include painting, drawing,
+          photography, gaming, and medieval reenactment. I am also an avid fitness enthusiast, with interests in weight
+          lifting, running, yoga, and martial arts. On this site you can find many examples of my work including my art
+          gallery as well as many of my programming projects.
+        </Typography>
+      </section>
     </header>
   );
 };

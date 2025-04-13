@@ -16,19 +16,19 @@ exports[`Home should render with default props 1`] = `
   <WithStyles(Typography)
     variant="h4"
   >
-    Now entering the Chris Dopuch Zone
+    Welcome to my personal website
   </WithStyles(Typography)>
   <WithStyles(Typography)
     variant="subtitle1"
   >
     <i>
-      Where I wrote enough React code to make my head spin
+      Where I write about my career, my projects, and my life
     </i>
   </WithStyles(Typography)>
   <img
     alt="my-face"
     className="face"
-    src="me.jpg"
+    src="headshot.jpg"
   />
   <WithStyles(Divider)
     className="divider"
@@ -46,7 +46,7 @@ exports[`Home should render with default props 1`] = `
           component={[Function]}
         >
           <WithStyles(CardMedia)
-            image="me-in-woods_thumb.jpg"
+            image="goth-wedding_thumb.jpg"
             title="About me"
           />
           <WithStyles(CardContent)>
@@ -84,7 +84,7 @@ exports[`Home should render with default props 1`] = `
           component={[Function]}
         >
           <WithStyles(CardMedia)
-            image="ruin_thumb.jpg"
+            image="trench-diorama-side_thumb.jpg"
             title="Image Gallery"
           />
           <WithStyles(CardContent)>
@@ -160,15 +160,6 @@ exports[`Home should render with default props 1`] = `
             target="blank"
           >
             Github
-          </WithStyles(Button)>
-          <WithStyles(Button)
-            color="primary"
-            component="a"
-            href="https://www.twitter.com/ChrisDopuch"
-            size="small"
-            target="blank"
-          >
-            Twitter
           </WithStyles(Button)>
           <WithStyles(Button)
             color="primary"

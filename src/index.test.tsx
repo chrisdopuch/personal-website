@@ -26,7 +26,7 @@ describe('index', () => {
   it('should render', () => {
     expect(render).toBeCalledWith(
       <StateProvider>
-        <App title="Dev: The Chris Dopuch Zone" />
+        <App title="Dev: Chris Dopuch Devs" />
       </StateProvider>,
       null
     );

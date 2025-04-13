@@ -24,15 +24,6 @@ exports[`DrawerContent renders default props 1`] = `
   <div
     className="social"
   >
-    <div
-      className="twitter"
-    >
-      <Follow
-        onLoad={[Function]}
-        options={Object {}}
-        username="chrisdopuch"
-      />
-    </div>
     <a
       aria-label="Follow @chrisdopuch on GitHub"
       className="github-button"
@@ -68,15 +59,6 @@ exports[`DrawerContent renders with \`isDarkMode\` true 1`] = `
   <div
     className="social"
   >
-    <div
-      className="twitter"
-    >
-      <Follow
-        onLoad={[Function]}
-        options={Object {}}
-        username="chrisdopuch"
-      />
-    </div>
     <a
       aria-label="Follow @chrisdopuch on GitHub"
       className="github-button"
@@ -145,15 +127,6 @@ exports[`DrawerContent renders with items 1`] = `
   <div
     className="social"
   >
-    <div
-      className="twitter"
-    >
-      <Follow
-        onLoad={[Function]}
-        options={Object {}}
-        username="chrisdopuch"
-      />
-    </div>
     <a
       aria-label="Follow @chrisdopuch on GitHub"
       className="github-button"
